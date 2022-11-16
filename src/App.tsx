@@ -6,10 +6,12 @@ import Home from "./components/pages/home/Home";
 import Destination from './components/pages/destination/Destination';
 import Crew from './components/pages/crew/Crew';
 import Technology from './components/pages/technology/Technology';
+import datas from './service/data.json';
 
 
 function App() {
-
+  console.log(datas);
+  
   return (
     <>
         <GlobalStyle />
