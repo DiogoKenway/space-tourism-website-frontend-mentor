@@ -1,4 +1,4 @@
-const Technology = () => {
+const Technology = (props: any) => {
     return (
         <h1>Technology</h1>
     )

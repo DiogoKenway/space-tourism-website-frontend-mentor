@@ -1,4 +1,4 @@
-const Destination = () => {
+const Destination = (props: any) => {
     return (
         <h1>Destination</h1>
     )
