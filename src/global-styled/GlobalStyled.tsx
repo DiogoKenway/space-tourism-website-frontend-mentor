@@ -2,18 +2,17 @@ import { createGlobalStyle } from "styled-components";
 
 const GlobalStyle = createGlobalStyle`
     * {
-        font-family: Helvetica;
         margin: 0;
         padding: 0;
         box-sizing: border-box;
     }
-
+    
     body {
-        background-color: #060911;
+        background-image: url("../assets/home/background-home-desktop.jpg");
         color: #FFF;
         width: 100vw;
         height: 100vh;
-        overflow-x: hidden;
+        font-family: 'Barlow Condensed', sans-serif;
     }
 
     a {
@@ -24,6 +23,10 @@ const GlobalStyle = createGlobalStyle`
         &:hover {
             color: #017aa2;
         }
+    }
+
+    ul, li {
+        list-style: none;
     }
 `
 

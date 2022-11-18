@@ -4,6 +4,16 @@ import logo from '../../assets/shared/logo.svg';
 import closeIcon from '../../assets/shared/icon-close.svg';
 import openIcon from '../../assets/shared/icon-hamburger.svg';
 
+import {
+    WrapperHeader,
+    Logo,
+    BarsNavBar,
+    NavigationBar,
+    CloseIcon
+}
+from './style';
+
+
 type Routes = {
     currentRoute: string;
 }
@@ -13,25 +23,25 @@ const Navbar = ({ currentRoute }: Routes) => {
 
 
     return (
-        <header>
+        <WrapperHeader>
             <div className="navbar-outside"
                 style={isShowing ? { display: "block" } : { display: "none" }}
                 onClick={() => setIsShowing(!isShowing)}></div>
-            <div className="logo">
+            <Logo>
                 <img src={logo} alt="logo do site" />
                 <hr />
-            </div>
-            <div className="bars-navbar"
+            </Logo>
+            <BarsNavBar
                 style={isShowing ? { display: "block" } : { display: "none" }}>
-                <img src={openIcon} alt="" />
-            </div>
-            <ul className='navbar'>
-                <div className="close"
+                <img src={openIcon} alt="icone para abrir menu" />
+            </BarsNavBar>
+            <NavigationBar>
+                <CloseIcon
                     style={isShowing ? { display: "block" } : { display: "none" }}>
                     <img src={closeIcon}
                         onClick={() => setIsShowing(!isShowing)}
                         alt="icone de fechar menu" />
-                </div>
+                </CloseIcon>
                 <li>
                     <Link to="/"
                         style={currentRoute === ""
@@ -60,8 +70,8 @@ const Navbar = ({ currentRoute }: Routes) => {
                             : { borderBottom: "solid 2px transparent" }
                         }><strong>0 3</strong>&nbsp; T E C H N O L O G Y</Link>
                 </li>
-            </ul>
-        </header>
+            </NavigationBar>
+        </WrapperHeader>
     )
 }
 
