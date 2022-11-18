@@ -19,6 +19,7 @@ type Routes = {
 }
 
 const Navbar = ({ currentRoute }: Routes) => {
+
     const [isShowing, setIsShowing] = useState(false);
 
 
@@ -36,11 +37,10 @@ const Navbar = ({ currentRoute }: Routes) => {
                 <img src={openIcon} alt="icone para abrir menu" />
             </BarsNavBar>
             <NavigationBar>
-                <CloseIcon
-                    style={isShowing ? { display: "block" } : { display: "none" }}>
+                <CloseIcon>
                     <img src={closeIcon}
-                        onClick={() => setIsShowing(!isShowing)}
-                        alt="icone de fechar menu" />
+                        alt="icone de fechar menu" 
+                        onClick={() => setIsShowing(!isShowing)}/>
                 </CloseIcon>
                 <li>
                     <Link to="/"

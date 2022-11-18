@@ -1,33 +1,39 @@
-import { createGlobalStyle } from "styled-components";
+import styled, { createGlobalStyle } from "styled-components";
+import imgDesktop from '../assets/home/background-home-desktop.jpg';
+
+
 
 const GlobalStyle = createGlobalStyle`
     * {
         margin: 0;
         padding: 0;
         box-sizing: border-box;
+        transition: ease .5s;
     }
     
-    body {
-        background-image: url("../assets/home/background-home-desktop.jpg");
-        color: #FFF;
+    body, html {
         width: 100vw;
         height: 100vh;
         font-family: 'Barlow Condensed', sans-serif;
     }
-
+    
     a {
         text-decoration: none;
-        color: #21b9d5;
-        transition: all ease .5s;
-
-        &:hover {
-            color: #017aa2;
-        }
+        transition: ease .5s;
+        color: rgba(255, 255, 255, .7);
     }
-
+    
     ul, li {
         list-style: none;
     }
 `
 
-export default GlobalStyle;
+const Content = styled.div`
+    background: url(${imgDesktop}) center no-repeat;
+    background-size: cover;
+    color: #FFF;
+    width: 100vw;
+    height: 100vh;
+`
+
+export { GlobalStyle, Content };
