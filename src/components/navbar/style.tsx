@@ -6,16 +6,22 @@ const WrapperHeader = styled.header`
     align-items: center;
     width: 100%;
 
-    // &:nth-child(1) .navbar-outside {
-    //     display: block;
-    //     position: fixed;
-    //     width: 100%;
-    //     min-height: 100vh;
-    //     background-color: 0, 0, 0, .3;
-    //     top: 0;
-    //     z-index: 3;
-    // }
+    @media(max-width: 450px) {
+        justify-content: space-between;
+        padding-right: 2rem;
+    }
 `
+
+// const NavbarOutside = styled.div`
+//     display: block;
+//     position: fixed;
+//     width: 100%;
+//     min-height: 100vh;
+//     background-color: 0, 0, 0, .3;
+//     top: 0;
+//     z-index: 3;
+//     border: solid 1px red;
+// `
 
 const Logo = styled.div`
     width: 50%;
@@ -58,15 +64,20 @@ const Logo = styled.div`
     }
 `
 
-const BarsNavBar = styled.div`
+const MenuMobile = styled.div`
+    display: none;   
+    
+    @media (max-width: 768px) {
+        display: none;
+    }
 
     @media (max-width: 450px) {
-        display: flex;
-        justify-content: center;
+        display: flex ;
+        justify-content: flex-end;
         align-items: center;
-        width: 50%;
-        margin-top: 2rem;
-        z-index: 5;
+        margin-top: 1.5rem;
+        z-index: 6;
+        cursor: pointer;
     }
 `
 
@@ -79,6 +90,7 @@ const NavigationBar = styled.ul`
     background-color: #806d6d33;
     backdrop-filter: blur(10px);
     margin-top: 2rem;
+    position: relative;
 
     li a {
         display: block;
@@ -117,10 +129,10 @@ const NavigationBar = styled.ul`
         right: 0;
         flex-direction: column;
         justify-content: flex-start;
+        padding-top: 5rem;
         margin: 0;
-        padding: 0;
         z-index: 5;
-        transition: all .3s ease;
+        transition: all .5s ease;
         backdrop-filter: blur(25px);
 
         li {
@@ -154,20 +166,23 @@ const CloseIcon = styled.div`
 
     @media (max-width: 450px) {
         display: block;
-        width: 100%;
-        padding: 3rem 0;
         position: relative;
-
-        img {
-            position: absolute;
-            top: 20%;
-            right: 10%;
-        }
-
+        cursor: pointer;
+        padding: .5rem;
+        position: absolute;
+        top: 2rem;
+        right: 30px;
     }
 `
 
 
 
 
-export { WrapperHeader, Logo, BarsNavBar, NavigationBar, CloseIcon };
+export {
+    WrapperHeader,
+    Logo,
+    MenuMobile,
+    NavigationBar,
+    CloseIcon
+    // NavbarOutside
+};

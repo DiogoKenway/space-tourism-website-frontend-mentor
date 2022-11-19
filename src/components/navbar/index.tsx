@@ -7,7 +7,7 @@ import openIcon from '../../assets/shared/icon-hamburger.svg';
 import {
     WrapperHeader,
     Logo,
-    BarsNavBar,
+    MenuMobile,
     NavigationBar,
     CloseIcon
 }
@@ -25,18 +25,17 @@ const Navbar = ({ currentRoute }: Routes) => {
 
     return (
         <WrapperHeader>
-            <div className="navbar-outside"
-                style={isShowing ? { display: "block" } : { display: "none" }}
-                onClick={() => setIsShowing(!isShowing)}></div>
             <Logo>
                 <img src={logo} alt="logo do site" />
                 <hr />
             </Logo>
-            <BarsNavBar
-                style={isShowing ? { display: "block" } : { display: "none" }}>
-                <img src={openIcon} alt="icone para abrir menu" />
-            </BarsNavBar>
-            <NavigationBar>
+            <MenuMobile
+                style={isShowing ? { display: "none" } : { display: "flex" }}>
+                <img src={openIcon} 
+                onClick={() => setIsShowing(!isShowing)}
+                alt="icone para abrir menu" />
+            </MenuMobile>
+            <NavigationBar style={isShowing ? { right: 0 } : { right: "-100vw" }}>
                 <CloseIcon>
                     <img src={closeIcon}
                         alt="icone de fechar menu" 

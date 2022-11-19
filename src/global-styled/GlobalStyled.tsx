@@ -1,5 +1,7 @@
 import styled, { createGlobalStyle } from "styled-components";
 import imgDesktop from '../assets/home/background-home-desktop.jpg';
+import imgTablet from '../assets/home/background-home-tablet.jpg';
+import imgMobile from '../assets/home/background-home-mobile.jpg';
 
 
 
@@ -9,6 +11,10 @@ const GlobalStyle = createGlobalStyle`
         padding: 0;
         box-sizing: border-box;
         transition: ease .5s;
+    }
+
+    img {
+        max-width: 100%;
     }
     
     body, html {
@@ -28,12 +34,22 @@ const GlobalStyle = createGlobalStyle`
     }
 `
 
-const Content = styled.div`
-    background: url(${imgDesktop}) center no-repeat;
+const Content = styled.div` 
+    background: url(${imgDesktop}) center top no-repeat;
     background-size: cover;
     color: #FFF;
     width: 100vw;
     height: 100vh;
+
+    @media(max-width: 768px) {
+        background: url(${imgTablet}) no-repeat;
+    }
+
+    @media(max-width: 375px) {
+        background: url(${imgMobile}) no-repeat;
+        max-height: 667px;
+        border: solid 1px red;
+    }
 `
 
 export { GlobalStyle, Content };
