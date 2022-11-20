@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import logo from '../../assets/shared/logo.svg';
 import closeIcon from '../../assets/shared/icon-close.svg';
 import openIcon from '../../assets/shared/icon-hamburger.svg';
@@ -11,7 +11,7 @@ import {
     NavigationBar,
     CloseIcon
 }
-from './style';
+    from './style';
 
 
 type Routes = {
@@ -22,7 +22,38 @@ const Navbar = ({ currentRoute }: Routes) => {
 
     const [showMenu, setShowMenu] = useState(true);
 
-    console.log(showMenu);
+
+    const getWidth = () => window.innerWidth
+        || document.documentElement.clientWidth
+        || document.body.clientWidth;
+
+    function useCurrentWidth() :number {
+        const [width, setWidth] = useState(getWidth());
+
+        useEffect(() => {
+       
+            let timeoutId: any;
+
+            const resizeListener = (): void => {
+                
+                clearTimeout(timeoutId);
+                
+                timeoutId = setTimeout(() => setWidth(getWidth()), 150);
+            };
+           
+            window.addEventListener('resize', resizeListener);
+
+            return () => {
+                window.removeEventListener('resize', resizeListener);
+            }
+
+        }, [])
+        
+        return width;
+    }
+
+    const width = useCurrentWidth();
+    console.log(width);
     
 
     return (
@@ -32,16 +63,17 @@ const Navbar = ({ currentRoute }: Routes) => {
                 <hr />
             </Logo>
             <MenuMobile
-                style={showMenu ? { display: "none" } : { display: "initial" }}>
-                <img src={openIcon} 
-                onClick={() => setShowMenu(!showMenu)}
-                alt="icone para abrir menu" />
+                style={showMenu || width > 450 ? { display: "none" } : { display: "initial" }}
+               >
+                <img src={openIcon}
+                    onClick={() => setShowMenu(!showMenu)}
+                    alt="icone para abrir menu" />
             </MenuMobile>
-            <NavigationBar style={showMenu ? { right: "0" } : {  right: "-100vw" }}>
+            <NavigationBar style={showMenu || width > 450 ? { right: "0" } : { right: "-100vw" }}>
                 <CloseIcon>
                     <img src={closeIcon}
-                        alt="icone de fechar menu" 
-                        onClick={() => setShowMenu(!showMenu)}/>
+                        alt="icone de fechar menu"
+                        onClick={() => setShowMenu(!showMenu)} />
                 </CloseIcon>
                 <li>
                     <Link to="/"
