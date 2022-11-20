@@ -72,7 +72,7 @@ const MenuMobile = styled.div`
     }
 
     @media (max-width: 450px) {
-        display: flex ;
+        display: flex;
         justify-content: flex-end;
         align-items: center;
         margin-top: 1.5rem;

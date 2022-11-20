@@ -20,8 +20,10 @@ type Routes = {
 
 const Navbar = ({ currentRoute }: Routes) => {
 
-    const [isShowing, setIsShowing] = useState(false);
+    const [showMenu, setShowMenu] = useState(true);
 
+    console.log(showMenu);
+    
 
     return (
         <WrapperHeader>
@@ -30,16 +32,16 @@ const Navbar = ({ currentRoute }: Routes) => {
                 <hr />
             </Logo>
             <MenuMobile
-                style={isShowing ? { display: "none" } : { display: "flex" }}>
+                style={showMenu ? { display: "none" } : { display: "initial" }}>
                 <img src={openIcon} 
-                onClick={() => setIsShowing(!isShowing)}
+                onClick={() => setShowMenu(!showMenu)}
                 alt="icone para abrir menu" />
             </MenuMobile>
-            <NavigationBar style={isShowing ? { right: 0 } : { right: "-100vw" }}>
+            <NavigationBar style={showMenu ? { right: "0" } : {  right: "-100vw" }}>
                 <CloseIcon>
                     <img src={closeIcon}
                         alt="icone de fechar menu" 
-                        onClick={() => setIsShowing(!isShowing)}/>
+                        onClick={() => setShowMenu(!showMenu)}/>
                 </CloseIcon>
                 <li>
                     <Link to="/"

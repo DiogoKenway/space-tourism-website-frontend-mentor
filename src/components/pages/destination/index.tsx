@@ -1,6 +1,8 @@
+import { Container } from "./sytle";
+
 const Destination = (props: any) => {
     return (
-        <h1>Destination</h1>
+        <Container>Destination</Container>
     )
 }
 

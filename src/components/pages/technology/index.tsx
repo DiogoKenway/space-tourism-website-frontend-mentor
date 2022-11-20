@@ -1,6 +1,8 @@
+import { Container } from "./style";
+
 const Technology = (props: any) => {
     return (
-        <h1>Technology</h1>
+        <Container>Technology</Container>
     )
 }
 
