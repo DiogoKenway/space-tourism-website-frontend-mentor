@@ -1,6 +1,10 @@
+import { Container } from "./style";
+
 const Crew = (props: any) => {
     return (
-        <h1>Crew</h1>
+        <Container >
+
+        </Container>
     )
 }
 

@@ -175,9 +175,6 @@ const CloseIcon = styled.div`
     }
 `
 
-
-
-
 export {
     WrapperHeader,
     Logo,

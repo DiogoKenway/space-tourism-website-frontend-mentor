@@ -1,6 +1,14 @@
+import { Container } from "./style";
+
+
+
+
 const Home = (props: any) => {
+
     return (
-        <h1>Home</h1>
+       <Container>
+
+       </Container>
     )
 }
 

@@ -1,5 +1,5 @@
-import { GlobalStyle, Content } from "./global-styled/GlobalStyled";
-import { Routes, Route, useLocation } from 'react-router-dom'
+import GlobalStyle from "./global-styled/GlobalStyled";
+import { Routes, Route, useLocation } from 'react-router-dom';
 
 import Navbar from "./components/navbar";
 import Home from "./components/pages/home";
@@ -15,7 +15,7 @@ function App() {
   const newLocation : string = location.split("/").join("");
 
   return (
-    <Content>
+    <>
       <GlobalStyle />
       <Navbar currentRoute={newLocation}/>
       <Routes>
@@ -24,7 +24,8 @@ function App() {
         <Route path="/crew" element={<Crew dataApi={dataApi} />} />
         <Route path="/technology" element={<Technology dataApi={dataApi} />} />
       </Routes>
-    </Content>
+    </>
+    
   )
 }
 

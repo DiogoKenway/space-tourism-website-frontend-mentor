@@ -34,22 +34,4 @@ const GlobalStyle = createGlobalStyle`
     }
 `
 
-const Content = styled.div` 
-    background: url(${imgDesktop}) center top no-repeat;
-    background-size: cover;
-    color: #FFF;
-    width: 100vw;
-    height: 100vh;
-
-    @media(max-width: 768px) {
-        background: url(${imgTablet}) no-repeat;
-    }
-
-    @media(max-width: 375px) {
-        background: url(${imgMobile}) no-repeat;
-        max-height: 667px;
-        border: solid 1px red;
-    }
-`
-
-export { GlobalStyle, Content };
+export default GlobalStyle;
