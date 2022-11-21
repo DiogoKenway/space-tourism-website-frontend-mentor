@@ -23,7 +23,7 @@ const Navbar = ({ currentRoute }: Routes) => {
     const [showMenu, setShowMenu] = useState(true);
 
 
-    const getWidth = () => window.innerWidth
+    const getWidth = () :number => window.innerWidth
         || document.documentElement.clientWidth
         || document.body.clientWidth;
 

@@ -1,7 +1,4 @@
-import styled, { createGlobalStyle } from "styled-components";
-import imgDesktop from '../assets/home/background-home-desktop.jpg';
-import imgTablet from '../assets/home/background-home-tablet.jpg';
-import imgMobile from '../assets/home/background-home-mobile.jpg';
+import { createGlobalStyle } from "styled-components";
 
 
 
@@ -10,18 +7,51 @@ const GlobalStyle = createGlobalStyle`
         margin: 0;
         padding: 0;
         box-sizing: border-box;
-        transition: ease .5s;
+        transition: all ease .5s;
     }
 
     img {
         max-width: 100%;
     }
     
-    body, html {
+    body {
         width: 100vw;
-        height: 100vh;
+        height: 120vh;
         font-family: 'Barlow Condensed', sans-serif;
-        overflow: hidden;
+        overflow-x: hidden;
+
+        &::-webkit-scrollbar {
+            width: 8px;
+            height: 8px;
+            display: block;
+        }
+
+        &::-webkit-scrollbar-thumb {
+            background-color: #ccc;
+            border-radius: 4px;
+
+            &:hover {
+                background-color: #b3b3b3;
+                box-shadow: 0 0 2px 1px rgba(0, 0, 0, .2);
+            }
+
+            &:active {
+                background-color: #999;
+            }
+        }
+ 
+        &::-webkit-scrollbar-track {
+            background-color: #e1e1e1;
+            border-radius: 4px;
+
+            &:hover,
+            &:active {
+                background-color: #d4d4d4;
+            }
+        }
+
+        
+
     }
     
     a {

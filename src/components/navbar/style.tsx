@@ -56,7 +56,7 @@ const Logo = styled.div`
     }
 
     @media (max-width: 450px) {
-        padding-left: .5rem;
+        
 
         img {
             width: 12vw;
@@ -144,7 +144,7 @@ const NavigationBar = styled.ul`
                 width: 90%;
                 font-size: 4vw;
                 padding: 1rem;
-                border-bottom: none;
+                border-bottom: none !important;
 
                 strong {
                     display: inline-block;
