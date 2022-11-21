@@ -30,7 +30,77 @@ const BgContent = styled.div`
     }
 `
 
+const HomeWrapper = styled.div({
+  display: "flex"
+})
+
+const TitleHome = styled.div`
+    width: 50%;
+    min-height: 80vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+
+    p, h1 {
+        width: 50%;
+        color: lavender;
+    }
+
+    p {
+        margin-bottom: 15%;
+        font-family: Barlow, sans-sarif;
+        font-weight: lighter;
+        font-size: 1vw;
+        color: rgba(230, 230, 250, .6);
+        line-height: 1.8;
+    }
+`
+
+const Title = styled.div`
+    color: lavender;
+    font-weight: lighter;
+    font-size: 1.7vw;
+    color: rgba(255, 255, 255, .85);
+`
+
+const ButtomExplore = styled.div`
+    width: 50%;
+    min-height: 80vh;
+    position: relative;
+
+    div {
+        display: flex;
+        align-items: flex-end;
+        position: absolute;
+        bottom: 20%;
+        right: 40%;
+        width: 20vw;
+        height: 20vw;
+        background-color: #FFF;
+        padding: 2rem;
+        border-radius: 100%;
+        cursor: pointer;
+        transition: all .5s;
+
+        span {
+            display: block;
+            width: 100%;
+        }
+    }
+`
+
+const Subtitle = styled.span`
+    display: block;
+    font-weight: lighter;
+    font-family: Bellefair, sans-sarif;
+    font-size: 6vw;
+    color: #FFF;
+`
 
 
-export { BgContent };
+
+
+
+export { BgContent, TitleHome, ButtomExplore, HomeWrapper, Title, Subtitle };
 

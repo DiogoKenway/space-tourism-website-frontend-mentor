@@ -1,4 +1,4 @@
-import { BgContent } from "./style";
+import { BgContent, TitleHome, ButtomExplore, HomeWrapper, Title, Subtitle } from "./style";
 import { Link } from "react-router-dom";
 
 const Home = (props: any) => {
@@ -6,14 +6,14 @@ const Home = (props: any) => {
     return (
         <>
             <BgContent />
-            <div className="home-wrapper">
-                <div className="title-home">
+            <HomeWrapper>
+                <TitleHome>
                     <h1>
-                        <span className="title">
+                        <Title>
                             S O, Y O U&nbsp;&nbsp;W A N T&nbsp;&nbsp;T O
                             &nbsp;&nbsp;T R A V E L&nbsp;&nbsp;T O
-                        </span>
-                        <span className="subtitle">SPACE</span>
+                        </Title>
+                        <Subtitle>SPACE</Subtitle>
                     </h1>
                     <p>
                         Let’s face it; if you want to go to space, you might as well genuinely
@@ -21,15 +21,15 @@ const Home = (props: any) => {
                         back, and relax because we’ll give you a truly out of this world
                         experience!
                     </p>                    
-                </div>
-                <div className="button-explore">
+                </TitleHome>
+                <ButtomExplore>
                     <Link to={"/destination"}>
-                        <div className="btn">
+                        <div>
                             <span>E X P L O R E</span>
                         </div>
                     </Link>
-                </div>
-            </div>
+                </ButtomExplore>
+            </HomeWrapper>
         </>
     )
 }
