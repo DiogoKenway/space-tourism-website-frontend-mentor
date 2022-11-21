@@ -3,7 +3,7 @@ import imgDesktop from '../../../assets/home/background-home-desktop.jpg';
 import imgTablet from '../../../assets/home/background-home-tablet.jpg';
 import imgMobile from '../../../assets/home/background-home-mobile.jpg';
 
-const Container = styled.div`
+const BgContent = styled.div`
     background: url(${imgDesktop}) center top no-repeat;
     background-size: cover;
     background-attachment: fixed;
@@ -30,5 +30,7 @@ const Container = styled.div`
     }
 `
 
-export { Container };
+
+
+export { BgContent };
 
