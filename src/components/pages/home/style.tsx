@@ -4,20 +4,19 @@ import imgTablet from '../../../assets/home/background-home-tablet.jpg';
 import imgMobile from '../../../assets/home/background-home-mobile.jpg';
 
 const BgContent = styled.div`
-    background: url(${imgDesktop}) center top no-repeat;
+    background: url(${imgDesktop}) center center no-repeat;
     background-size: cover;
-    background-attachment: fixed;
     width: 100vw;
-    height: 120vh;
     min-height: 100vh;
     transition: all ease .5s;
-    background-color: rgb(34, 31, 31);
+    // background-color: #0B0D19;
     position: absolute;
     top: 0;
     left: 0;
     z-index: -1;
+    box-shadow: 5px 5px 5px 15px #fff;
 
-    @media(max-width: 768px) {
+    @media(max-width: 950px) {
         background: url(${imgTablet}) center top no-repeat;
         background-size: cover;
         background-attachment: fixed;
@@ -30,106 +29,66 @@ const BgContent = styled.div`
     }
 `
 
-const HomeWrapper = styled.div({
-  display: "flex",
-})
-
-const TitleHome = styled.div`
-    width: 50%;
-    min-height: 80vh;
+const WrapperHome = styled.section`
+    max-width: 1660px;
+    margin: 0 auto;
     display: flex;
-    flex-direction: column;
-    justify-content: flex-end;
-    align-items: center;
+    gap: 30px;
+    align-items: flex-end;
+    justify-content: space-around;
+    height: 80vh;
+    // border: solid 1px #f1f2;
+    `
+    
+    const InfoHome = styled.div`
+    gap: 3rem;
+    max-width: 50%;
+    color: #FFF;
+    transform: translate(-70px, -40px);
+    // border: solid 1px #f1f2;
 
-    @media(max-width: 768px) {
-        width: 100%;
-        min-height: initial;
-        margin-top: 3rem;
-    }
-
-    p, h1 {
-        width: 50%;
-        color: lavender;
-
-        @media(max-width: 768px) {
-            text-align: center;
-        }
+    h1 {
+        font-family: 'Bellefair', serif;
+        font-size: 180px;
+        font-weight: 400;
+        line-height: 172px;
+        text-transform: uppercase;
+        margin-bottom: 40px;
     }
 
     p {
-        margin-bottom: 15%;
-        font-family: Barlow, sans-sarif;
-        font-weight: lighter;
-        font-size: 1vw;
-        color: rgba(230, 230, 250, .8);
-        line-height: 1.8;
+        max-width: 550px;
+        font-size: 1.4rem;
+        line-height: 40px;
+        font-weight: 400;
+        font-family: 'Barlow';
+        color: #D0D6F9;
     }
 `
 
-const Title = styled.div`
-    color: lavender;
-    font-weight: lighter;
-    font-size: 1.7vw;
-    color: rgba(255, 255, 255, .85);
-
-    
-`
-
-const ButtomExplore = styled.div`
-    width: 50%;
-    min-height: 80vh;
+const BtnExplore = styled.div`
+    // border: solid 1px #F124ac;
+    width: 18vw;
+    height: 18vw;
+    border-radius: 100%;
+    background-color: #FFF;
+    transform: translate(35%, -40px);
     position: relative;
 
-    @media(max-width: 768px) {
-        width: 100%;
-        min-height: initial;
-    }
-
-    div {
-        display: flex;
-        align-items: center;
+    a {
+        display: block;
+        color: #000;
         position: absolute;
-        bottom: 20%;
-        right: 30%;
-        width: 17vw;
-        height: 17vw;
-        background-color: #FFF;
-        padding: 2rem;
-        border-radius: 100%;
-        cursor: pointer;
-        transition: all ease .5s;
-        
-        &:hover {
-            transform: scale(1.2);
-            box-shadow: 0px 0px 95px  rgba(255, 255, 255);
-        }
-
-        span {
-            display: block;
-            width: 100%;
-            color: #000;
-            text-align: center;
-            font-family: 'Bellefair';
-            font-size: 2rem;
-            line-height: 37px;
-            letter-spacing: 2px;
-
-        }
+        top: 47%;
+        left: 17%;
+        text-align: center;
+        text-transform: uppercase;
+        font-family: 'Bellefair';
+        font-style: normal;
+        font-weight: 400;
+        font-size: clamp(2.4vw, 1.8rem, 2.8rem);
+        line-height: 37px;
+        letter-spacing: 3px;
     }
 `
-
-const Subtitle = styled.span`
-    display: block;
-    font-weight: lighter;
-    font-family: Bellefair;
-    font-size: 6vw;
-    color: #FFF;
-`
-
-
-
-
-
-export { BgContent, TitleHome, ButtomExplore, HomeWrapper, Title, Subtitle };
-
+export { BgContent, WrapperHome, InfoHome, BtnExplore }

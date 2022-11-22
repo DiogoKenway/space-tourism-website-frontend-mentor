@@ -1,10 +1,12 @@
 import styled from 'styled-components';
 
 const WrapperHeader = styled.header`
+    max-width: 1660px;
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 100%;
+    margin: 0 auto;
+    padding-top: 40px;
 
     @media(max-width: 450px) {
         justify-content: space-between;
@@ -12,34 +14,21 @@ const WrapperHeader = styled.header`
     }
 `
 
-// const NavbarOutside = styled.div`
-//     display: block;
-//     position: fixed;
-//     width: 100%;
-//     min-height: 100vh;
-//     background-color: 0, 0, 0, .3;
-//     top: 0;
-//     z-index: 3;
-//     border: solid 1px red;
-// `
-
 const Logo = styled.div`
     width: 50%;
-    padding-left: 2rem;
-    margin-top: 2rem;
     position: relative;
 
     img {
-        width: 5%;
+        width: 8%;
     }
 
     hr {
-        width: 90%;
+        width: 89%;
         position: absolute;
+        top: 60%;
+        right: -4%;
         border: none;
         border-bottom: 1px solid #80808080;
-        top: 20%;
-        right: -4%;
         z-index: 5;
     }
 
@@ -89,7 +78,7 @@ const NavigationBar = styled.ul`
     width: 65%;
     background-color: #806d6d33;
     backdrop-filter: blur(10px);
-    margin-top: 2rem;
+    
     position: relative;
 
     li a {
