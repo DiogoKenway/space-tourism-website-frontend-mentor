@@ -72,15 +72,21 @@ const BtnExplore = styled.div`
     height: 18vw;
     border-radius: 100%;
     background-color: #FFF;
-    transform: translate(35%, -40px);
     position: relative;
+    margin-bottom: 2rem;
+    cursor: pointer;
+
+    &:hover {
+        transform: scale(1.15);
+        box-shadow: 5px 5px 120px #FFF;
+    }
 
     a {
         display: block;
         color: #000;
         position: absolute;
-        top: 47%;
-        left: 17%;
+        top: 46%;
+        left: 16.5%;
         text-align: center;
         text-transform: uppercase;
         font-family: 'Bellefair';
