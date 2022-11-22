@@ -25,7 +25,7 @@ const Home = (props: any) => {
                 <ButtomExplore>
                     <Link to={"/destination"}>
                         <div>
-                            <span>E X P L O R E</span>
+                            <span>EXPLORE</span>
                         </div>
                     </Link>
                 </ButtomExplore>

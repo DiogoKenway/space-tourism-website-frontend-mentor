@@ -9,14 +9,10 @@ const GlobalStyle = createGlobalStyle`
         box-sizing: border-box;
         transition: all ease .5s;
     }
-
-    img {
-        max-width: 100%;
-    }
     
     body {
         width: 100vw;
-        height: 120vh;
+        height: 100vh;
         font-family: 'Barlow Condensed', sans-serif;
         overflow-x: hidden;
 

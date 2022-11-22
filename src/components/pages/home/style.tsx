@@ -31,7 +31,7 @@ const BgContent = styled.div`
 `
 
 const HomeWrapper = styled.div({
-  display: "flex"
+  display: "flex",
 })
 
 const TitleHome = styled.div`
@@ -42,9 +42,19 @@ const TitleHome = styled.div`
     justify-content: flex-end;
     align-items: center;
 
+    @media(max-width: 768px) {
+        width: 100%;
+        min-height: initial;
+        margin-top: 3rem;
+    }
+
     p, h1 {
         width: 50%;
         color: lavender;
+
+        @media(max-width: 768px) {
+            text-align: center;
+        }
     }
 
     p {
@@ -52,7 +62,7 @@ const TitleHome = styled.div`
         font-family: Barlow, sans-sarif;
         font-weight: lighter;
         font-size: 1vw;
-        color: rgba(230, 230, 250, .6);
+        color: rgba(230, 230, 250, .8);
         line-height: 1.8;
     }
 `
@@ -62,6 +72,8 @@ const Title = styled.div`
     font-weight: lighter;
     font-size: 1.7vw;
     color: rgba(255, 255, 255, .85);
+
+    
 `
 
 const ButtomExplore = styled.div`
@@ -69,23 +81,40 @@ const ButtomExplore = styled.div`
     min-height: 80vh;
     position: relative;
 
+    @media(max-width: 768px) {
+        width: 100%;
+        min-height: initial;
+    }
+
     div {
         display: flex;
-        align-items: flex-end;
+        align-items: center;
         position: absolute;
         bottom: 20%;
-        right: 40%;
-        width: 20vw;
-        height: 20vw;
+        right: 30%;
+        width: 17vw;
+        height: 17vw;
         background-color: #FFF;
         padding: 2rem;
         border-radius: 100%;
         cursor: pointer;
-        transition: all .5s;
+        transition: all ease .5s;
+        
+        &:hover {
+            transform: scale(1.2);
+            box-shadow: 0px 0px 95px  rgba(255, 255, 255);
+        }
 
         span {
             display: block;
             width: 100%;
+            color: #000;
+            text-align: center;
+            font-family: 'Bellefair';
+            font-size: 2rem;
+            line-height: 37px;
+            letter-spacing: 2px;
+
         }
     }
 `
@@ -93,7 +122,7 @@ const ButtomExplore = styled.div`
 const Subtitle = styled.span`
     display: block;
     font-weight: lighter;
-    font-family: Bellefair, sans-sarif;
+    font-family: Bellefair;
     font-size: 6vw;
     color: #FFF;
 `
