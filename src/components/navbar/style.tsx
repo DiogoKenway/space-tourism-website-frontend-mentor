@@ -176,5 +176,4 @@ export {
     MenuMobile,
     NavigationBar,
     CloseIcon
-    // NavbarOutside
 };
