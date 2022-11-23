@@ -21,13 +21,13 @@ const Home = (props: any) => {
                         truly out of this world experience!
                     </p>
                 </InfoHome>
-                <BtnExplore>                    
+                    <BtnExplore>
                         <Link to="/destination">
                             explore
                         </Link>
-                </BtnExplore>
+                    </BtnExplore>
             </WrapperHome>
-            
+
         </>
     )
 }

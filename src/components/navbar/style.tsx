@@ -3,13 +3,16 @@ import styled from 'styled-components';
 const WrapperHeader = styled.header`
     max-width: 1660px;
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
     margin: 0 auto;
     padding-top: 40px;
 
+    @media(max-width: 768px) {
+        padding: 0;
+    }
+
     @media(max-width: 450px) {
-        justify-content: space-between;
         padding-right: 2rem;
     }
 `
@@ -33,10 +36,11 @@ const Logo = styled.div`
     }
 
     @media (max-width: 768px) {
-        width: 30%;
+        width: 25%;
+        margin-left: 2rem;
 
         img {
-            width: 20%;
+            width: 25%;
         }
 
         hr {
@@ -45,7 +49,7 @@ const Logo = styled.div`
     }
 
     @media (max-width: 450px) {
-        
+        margin-top: 1.5rem;
 
         img {
             width: 12vw;
@@ -73,7 +77,7 @@ const MenuMobile = styled.div`
 
 const NavigationBar = styled.ul`
     display: flex;
-    justify-content: center;
+    justify-content: space-around;
     align-items: center;
     width: 65%;
     background-color: #806d6d33;
@@ -98,10 +102,11 @@ const NavigationBar = styled.ul`
     }
 
     @media(max-width: 768px) {
-        width: 70%;
-        
+        width: 60%;
+        padding: .5rem;
         li a {
-            font-size: 2.1vw;
+            font-size: 2.2vw;
+            margin: 0;
 
             strong {
                 display: none;
@@ -134,6 +139,7 @@ const NavigationBar = styled.ul`
                 font-size: 4vw;
                 padding: 1rem;
                 border-bottom: none !important;
+                // border-right: 2px solid #FFF;
 
                 strong {
                     display: inline-block;
