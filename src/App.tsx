@@ -6,10 +6,7 @@ import Home from "./components/pages/home";
 import Destination from './components/pages/destination';
 import Crew from './components/pages/crew';
 import Technology from './components/pages/technology';
-import dataApi, { destinations } from './service/data.json';
-
-// console.log(dataApi);
-console.log(destinations);
+import dataApi from './service/data.json';
 
 
 function App() {
@@ -23,7 +20,7 @@ function App() {
       <Navbar currentRoute={newLocation}/>
       <Routes>
         <Route path="/" element={<Home dataApi={dataApi} />} />
-        <Route path="/destination" element={<Destination dataApi={dataApi} />} />
+        <Route path="/destination" element={<Destination />} />
         <Route path="/crew" element={<Crew dataApi={dataApi} />} />
         <Route path="/technology" element={<Technology dataApi={dataApi} />} />
       </Routes>

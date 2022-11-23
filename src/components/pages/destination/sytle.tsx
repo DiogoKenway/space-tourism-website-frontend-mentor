@@ -30,4 +30,63 @@ const Container = styled.div`
     }
 `
 
-export { Container };
+const Content = styled.div`
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 75vw;
+    min-height: 75vh;
+    margin: 0 auto;
+`
+
+const TitleImg = styled.div`
+    display: flex;
+    flex-direction: column;
+    justify-content:center;
+    align-items: start;
+    width: 50%;
+    padding: 1rem;
+
+    h2 {
+        color: #FFF;
+        font-family: Barlow Condensed, sans-serif;
+        font-weight: 500;
+        font-size: 2vw;
+        padding: .5rem;
+
+        span {
+            padding-right: .5rem;
+            color: rgb(117, 89, 89);
+        }
+    }
+
+    @keyframes rotate {
+        from {
+            tranform: rotate(0);
+        }
+
+        to {
+            transform: rotate(360deg)
+        }
+    }
+
+    img {
+        width: 90%;
+        padding: 2rem;
+        animation: rotate 30s infinite linear;
+    }
+`
+
+const WrapperSlider = styled.div`
+    display: inline-block;
+    width: 40%;
+    padding: 2rem;
+    margin-top: -2rem;
+    color: #FFF;
+
+    hr:first-of-type {
+        color: red;
+    }
+`
+
+export { Container, Content, TitleImg, WrapperSlider };
