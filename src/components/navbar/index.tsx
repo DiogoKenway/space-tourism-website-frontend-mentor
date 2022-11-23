@@ -53,7 +53,6 @@ const Navbar = ({ currentRoute }: Routes) => {
     }
 
     const width = useCurrentWidth();
-    console.log(width);
     
 
     return (
