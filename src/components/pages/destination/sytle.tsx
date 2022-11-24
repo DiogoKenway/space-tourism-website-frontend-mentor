@@ -84,9 +84,24 @@ const WrapperSlider = styled.div`
     margin-top: -2rem;
     color: #FFF;
 
-    hr:first-of-type {
-        color: red;
+`
+
+const HeaderSlider = styled.div`
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+
+    button {
+        display: block;
+        padding: .5rem;
+        background-color: transparent;
+        border: none;
+        cursor: pointer;
+        font-family: Barlow Condensed, sans-serif;
+        font-weight: 300;
+        font-size: 1.2vw;
+        color: rgba(255, 255, 255, .8);
     }
 `
 
-export { Container, Content, TitleImg, WrapperSlider };
+export { Container, Content, TitleImg, WrapperSlider, HeaderSlider };

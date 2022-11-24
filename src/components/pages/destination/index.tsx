@@ -13,7 +13,8 @@ import {
     Container,
     Content,
     TitleImg,
-    WrapperSlider
+    WrapperSlider,
+    HeaderSlider
  } from "./sytle";
 
 
@@ -68,14 +69,12 @@ const Destination = () => {
                                                         <img src={imgIndex(index)} alt={item.name} />
                                                     </TitleImg>
                                                     <WrapperSlider>
-                                                        <div className="header-slider"
-                                                            data-glide-el="controls[nav]"
-                                                        >
+                                                        <HeaderSlider data-glide-el="controls[nav]">
                                                             <button data-glide-dir="=0">M O O N</button>
                                                             <button data-glide-dir="=1">M A R S</button>
                                                             <button data-glide-dir="=2">E U R O P A</button>
                                                             <button data-glide-dir="=3">T I T A N</button>
-                                                        </div>
+                                                        </HeaderSlider>
                                                         <div className="slider">
                                                             <div className="content-slider">
                                                                 <h2>{item.name.toUpperCase()}</h2>
