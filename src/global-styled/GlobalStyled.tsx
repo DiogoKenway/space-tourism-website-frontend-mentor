@@ -59,6 +59,10 @@ const GlobalStyle = createGlobalStyle`
     ul, li {
         list-style: none;
     }
+
+    .glide__bullet--active {
+        border-bottom: 2px solid white !important;
+    }
 `
 
 export default GlobalStyle;

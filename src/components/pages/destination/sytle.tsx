@@ -35,14 +35,14 @@ const Content = styled.div`
     justify-content: center;
     align-items: center;
     width: 75vw;
+    margin: auto;
     min-height: 75vh;
-    margin: 0 auto;
 `
 
 const TitleImg = styled.div`
     display: flex;
     flex-direction: column;
-    justify-content:center;
+    justify-content: center;
     align-items: start;
     width: 50%;
     padding: 1rem;
@@ -56,7 +56,7 @@ const TitleImg = styled.div`
 
         span {
             padding-right: .5rem;
-            color: rgb(117, 89, 89);
+            color: rgb(112, 89, 89);
         }
     }
 
@@ -88,7 +88,8 @@ const WrapperSlider = styled.div`
 
 const HeaderSlider = styled.div`
     display: flex;
-    justify-content: flex-start;
+    // justify-content: space-around;
+    gap: 10px;
     align-items: center;
 
     button {
@@ -101,6 +102,15 @@ const HeaderSlider = styled.div`
         font-weight: 300;
         font-size: 1.2vw;
         color: rgba(255, 255, 255, .8);
+        transition: all ease .2s;
+
+        &:active {
+            border-bottom: 2px solid white;
+        }
+
+        &:hover {
+            border-bottom: 2px solid rgba(255, 255, 255, .3);;
+        }
     }
 `
 
