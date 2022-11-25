@@ -14,7 +14,7 @@ const GlobalStyle = createGlobalStyle`
         width: 100vw;
         height: 100vh;
         font-family: 'Barlow Condensed', sans-serif;
-        overflow-x: hidden;
+        overflow: hidden;
 
         &::-webkit-scrollbar {
             width: 8px;

@@ -3,25 +3,27 @@ import { useEffect } from 'react';
 import "@glidejs/glide/src/assets/sass/glide.core.scss";
 import Glide from '@glidejs/glide';
 
-import img0 from '../../../assets/destination/image-europa.webp';
+import img0 from '../../../assets/destination/image-moon.webp';
 import img1 from '../../../assets/destination/image-mars.webp';
-import img2 from '../../../assets/destination/image-moon.webp';
+import img2 from '../../../assets/destination/image-europa.webp';
 import img3 from '../../../assets/destination/image-titan.webp';
 import { destinations } from '../../../service/data.json'
 
 
 import {
     Container,
-    Content,
+    WrapperDestination,
     TitleImg,
     WrapperSlider,
-    HeaderSlider
+    HeaderSlider,
+    ContentSlider,
+    InfoSlider
 } from "./sytle";
 
 
 const Destination = () => {
 
-    const imgs: string[] = [img0, img1,img2, img3];
+    const imgs: string[] = [img0, img1, img2, img3];
 
     useEffect(() => {
         const glide = new Glide('.glide', {
@@ -34,7 +36,7 @@ const Destination = () => {
     }, []);
 
 
-    const getImageByIndex = (index: number) : string => imgs[index]; 
+    const getImageByIndex = (index: number): string => imgs[index];
 
     return (
         <>
@@ -49,41 +51,30 @@ const Destination = () => {
 
                                         destinations.map((item, index) => (
                                             <li className="glide__slide" key={index}>
-                                                <Content>
+                                                <WrapperDestination>
                                                     <TitleImg>
-                                                        <h2>
-                                                            <span>{`0 ${index + 1}`}</span>P I C K
-                                                            &nbsp;&nbsp;&nbsp; Y O U R
-                                                            &nbsp;&nbsp;&nbsp; D E S T I N A T I O N
-                                                        </h2>
                                                         <img src={getImageByIndex(index)} alt={item.name} />
                                                     </TitleImg>
                                                     <WrapperSlider>
                                                         <HeaderSlider data-glide-el="controls[nav]">
-                                                            <button data-glide-dir="=0">M O O N</button>
-                                                            <button data-glide-dir="=1">M A R S</button>
-                                                            <button data-glide-dir="=2">E U R O P A</button>
-                                                            <button data-glide-dir="=3">T I T A N</button>
+                                                            <button data-glide-dir="=0">moon</button>
+                                                            <button data-glide-dir="=1">mars</button>
+                                                            <button data-glide-dir="=2">europa</button>
+                                                            <button data-glide-dir="=3">titan</button>
                                                         </HeaderSlider>
-                                                        <div className="slider">
-                                                            <div className="content-slider">
-                                                                <h2>{item.name.toUpperCase()}</h2>
+                                                        <ContentSlider>
+                                                            <div>
+                                                                <h1>{item.name}</h1>
                                                                 <p>{item.description}</p>
                                                                 <hr />
-                                                                <div className="info-slider">
-                                                                    <div className="info-box">
-                                                                        <h2>AVG. DISTANCE</h2>
-                                                                        <span>{item.travel.toUpperCase()}</span>
-                                                                    </div>
-                                                                    <div className="info-box">
-                                                                        <h2>EST. TRAVEL TIME</h2>
-                                                                        <span>{item.distance.toUpperCase()}</span>
-                                                                    </div>
-                                                                </div>
                                                             </div>
-                                                        </div>
+                                                            <InfoSlider>
+                                                                <span>{item.distance}</span>
+                                                                <span>{item.travel}</span>
+                                                            </InfoSlider>
+                                                        </ContentSlider>
                                                     </WrapperSlider>
-                                                </Content>
+                                                </WrapperDestination>
                                             </li>
                                         ))
 

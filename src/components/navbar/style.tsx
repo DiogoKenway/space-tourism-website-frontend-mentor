@@ -1,12 +1,12 @@
 import styled from 'styled-components';
 
 const WrapperHeader = styled.header`
-    max-width: 1660px;
+    width: 100%;
     display: flex;
     justify-content: space-between;
     align-items: center;
     margin: 0 auto;
-    padding-top: 40px;
+    padding: 40px 0 0 40px;
 
     @media(max-width: 768px) {
         padding: 0;
@@ -81,7 +81,7 @@ const NavigationBar = styled.ul`
     align-items: center;
     width: 65%;
     background-color: #806d6d33;
-    backdrop-filter: blur(10px);
+    backdrop-filter: blur(15px);
     
     position: relative;
 
@@ -90,7 +90,7 @@ const NavigationBar = styled.ul`
         margin: 0 1rem;
         padding: 2rem 0;
         border-bottom: solid 2px transparent;
-        font-size: 1vw;
+        font-size: clamp(1.1vw, 2rem, .75rem);
 
         strong {
             color: white;

@@ -7,14 +7,12 @@ const BgContent = styled.div`
     background: url(${imgDesktop}) center center no-repeat;
     background-size: cover;
     width: 100vw;
-    min-height: 120vh;
+    min-height: 100vh;
     transition: all ease .5s;
-    background-color: #0B0D19;
     position: absolute;
     top: 0;
     left: 0;
     z-index: -1;
-    box-shadow: 5px 5px 5px 15px #fff;
 
     @media(max-width: 768px) {
         background: url(${imgTablet}) center top no-repeat;
@@ -30,7 +28,7 @@ const BgContent = styled.div`
 `
 
 const WrapperHome = styled.section`
-    max-width: 1660px;
+    width: 90%;
     margin: 0 auto;
     display: flex;
     align-items: flex-end;
@@ -42,11 +40,12 @@ const WrapperHome = styled.section`
         flex-direction: column;
         align-items: center;
         justify-content: center;
-        height: 100vh;
-        gap: 9rem;
+        height: 95vh;
+        gap: 8rem;
     }
 
     @media(max-width: 450px) {
+        width: 100%;
         height: 95vh;
         justify-content: space-around;
         padding: 5rem;
@@ -56,15 +55,31 @@ const WrapperHome = styled.section`
     const InfoHome = styled.div`
     width: 45%;
     display: flex;
-    // height: 30%;
     flex-direction: column;
     align-items: center;
     color: #FFF;
+    // border: solid 1px #f23;
     
-    // border: solid 1px #f581f2;
+        span {
+            text-transform: uppercase;
+            margin-bottom: 3rem;
+            color: #D0D6F9;
+            font-size: clamp(2vw, 2rem, 1.5rem);
+            letter-spacing: 8px;
+            text-align: center;
+
+            @media(max-width: 450px) {
+                margin: 0;
+            }
+        }
 
     @media(max-width: 768px) {
         width: 70%;
+    }
+
+    @media(max-width: 450px) {
+        width: 70%;
+        height: 35vh;
     }
 
     h1 {
@@ -81,7 +96,7 @@ const WrapperHome = styled.section`
         }
 
         @media(max-width: 450px) {
-            margin-bottom: 1rem;
+            margin: 0rem;
             font-size: 80px;
         }
     }
@@ -124,8 +139,8 @@ const BtnExplore = styled.div`
     }
 
     @media(max-width: 450px) {
-        width: 50vw;
-        height: 50vw;
+        width: 60vw;
+        height: 60vw;
         justify-self: start;
     }
 
