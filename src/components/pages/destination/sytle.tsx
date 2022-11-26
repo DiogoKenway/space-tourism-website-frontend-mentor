@@ -3,7 +3,7 @@ import imgDesktop from '../../../assets/destination/background-destination-deskt
 import imgTablet from '../../../assets/destination/background-destination-tablet.jpg';
 import imgMobile from '../../../assets/destination/background-destination-mobile.jpg';
 
-const Container = styled.div`
+const BgContent = styled.div`
     background: url(${imgDesktop}) center top no-repeat;
     background-size: cover;
     background-attachment: fixed;
@@ -31,6 +31,17 @@ const Container = styled.div`
 `
 
 const WrapperDestination = styled.div`
+    
+    @media(max-width: 768px) {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        height: 100%;
+        // border: solid 1px #Aff;
+    }
+`
+
+const Container = styled.div`
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -38,16 +49,27 @@ const WrapperDestination = styled.div`
     margin: auto;
     height: 85vh;
     // border: solid 1px #af22;
+
+    @media(max-width: 768px) {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 60%;
+        height: 100%;
+    }
 `
 
 const TitleImg = styled.div`    
     display: flex;
-    // flex-direction: column;
-    // justify-content: center;
     align-items: flex-end;
     width: 50%;
     padding: 1rem;
 
+    @media(max-width: 768px) {
+        width: 100%;
+        padding: 2rem;
+        justify-content: center;
+    }
 
     @keyframes rotate {
         from {
@@ -71,17 +93,20 @@ const WrapperSlider = styled.div`
     flex-direction: column;
     justify-content: center;
     width: 50%;
-    height: 80%;
-    padding-top: 2rem;
+    height: 70%;
     color: #FFF;
-    // border: solid 1px #fa54aa;       
 
+    @media(max-width: 768px) {
+        width: 100vw;
+        align-items: center;
+        text-align: center;
+    }
 `
 
 const HeaderSlider = styled.div`
     display: flex;
-    gap: 12px;
-    align-items: center;
+    gap: 1rem;
+    flex-wrapper: wrapper;
 
     button {
         display: block;
@@ -93,7 +118,7 @@ const HeaderSlider = styled.div`
         cursor: pointer;
         font-family: Barlow Condensed, sans-serif;
         font-weight: 300;
-        font-size: 1.2vw;
+        font-size: clamp(1.2vw, 1.5rem, 1.2rem);
         color: rgba(255, 255, 255, .8);
         transition: all ease .5s;
 
@@ -108,15 +133,21 @@ const ContentSlider = styled.div`
     display: flex;
     flex-direction: column;
     justify-content: center;
-    gap: 5rem;
+    gap: 4rem;
     width: 65%;
-    height: 76%;
+    height: 100%;
 
+    @media(max-width: 768px) {
+        gap: 3rem;
+    }
+`
+
+const TitleSlider = styled.div`
     h1 {
         font-family: 'Bellefair';
         font-style: normal;
         font-weight: 400;
-        font-size: 6.5rem;
+        font-size: 6vw;
         text-transform: uppercase;
     }
 
@@ -127,14 +158,23 @@ const ContentSlider = styled.div`
         font-size: 1.25rem;
         line-height: 32px;
         color: #D0D6F9;
-        padding-bottom: 3.5rem;        
+        padding-bottom: 3rem;        
     }
 
     hr {
-        width: 110%;
         border: none;
-
         border-bottom: solid 1px #383B4B;
+    }
+
+    @media(max-width: 768px) {
+        h1 {
+            font-size: 5rem;
+            margin: 1rem 0;
+        }
+
+        p {
+            font-size: 1rem;
+        }
     }
 
 `
@@ -147,19 +187,27 @@ const InfoSlider = styled.div`
         display: inline-block;         
         font-family: 'Bellefair';
         font-style: normal;
-        font-weight: 300;
-        font-size: 2rem;
+        font-weight: 400;
+        font-size: 1.9rem;
         line-height: 32px;
         text-transform: uppercase;
     }
+
+    @media(max-width: 768px) {
+        justify-content: space-around;
+        gap: 0;
+    }
+
 `
 
 export {
-    Container,
     WrapperDestination,
+    Container,
+    BgContent,
     TitleImg,
     WrapperSlider,
     HeaderSlider,
     ContentSlider,
-    InfoSlider
+    InfoSlider,
+    TitleSlider
 };

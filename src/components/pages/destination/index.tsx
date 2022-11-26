@@ -11,13 +11,15 @@ import { destinations } from '../../../service/data.json'
 
 
 import {
-    Container,
+    BgContent,
     WrapperDestination,
+    Container,
     TitleImg,
     WrapperSlider,
     HeaderSlider,
     ContentSlider,
-    InfoSlider
+    InfoSlider,
+    TitleSlider
 } from "./sytle";
 
 
@@ -26,7 +28,7 @@ const Destination = () => {
     const imgs: string[] = [img0, img1, img2, img3];
 
     useEffect(() => {
-        const glide = new Glide('.glide', {
+        const glide = new Glide('#glide', {
             type: 'slider',
             perView: 1
 
@@ -40,18 +42,18 @@ const Destination = () => {
 
     return (
         <>
-            <Container />
+            <BgContent />
             <div className="destination wrapper">
                 {
                     destinations ? (
-                        <div className="glide">
+                        <WrapperDestination id='glide'>
                             <div className="glide__track" data-glide-el="track">
                                 <ul className="glide__slides">
                                     {
 
                                         destinations.map((item, index) => (
                                             <li className="glide__slide" key={index}>
-                                                <WrapperDestination>
+                                                <Container>
                                                     <TitleImg>
                                                         <img src={getImageByIndex(index)} alt={item.name} />
                                                     </TitleImg>
@@ -63,25 +65,25 @@ const Destination = () => {
                                                             <button data-glide-dir="=3">titan</button>
                                                         </HeaderSlider>
                                                         <ContentSlider>
-                                                            <div>
+                                                            <TitleSlider>
                                                                 <h1>{item.name}</h1>
                                                                 <p>{item.description}</p>
                                                                 <hr />
-                                                            </div>
+                                                            </TitleSlider>
                                                             <InfoSlider>
                                                                 <span>{item.distance}</span>
                                                                 <span>{item.travel}</span>
                                                             </InfoSlider>
                                                         </ContentSlider>
                                                     </WrapperSlider>
-                                                </WrapperDestination>
+                                                </Container>
                                             </li>
                                         ))
 
                                     }
                                 </ul>
                             </div>
-                        </div>
+                        </WrapperDestination>
                     ) : (<h1>CARREGANDO...</h1>)
                 }
             </div>
