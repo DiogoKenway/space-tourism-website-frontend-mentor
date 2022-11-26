@@ -4,15 +4,13 @@ import imgTablet from '../../../assets/crew/background-crew-tablet.jpg';
 import imgMobile from '../../../assets/crew/background-crew-mobile.jpg';
 
 
-const Container = styled.div`
+const BgImage = styled.div`
     background: url(${imgDesktop}) center top no-repeat;
     background-size: cover;
     background-attachment: fixed;
     width: 100vw;
-    height: 120vh;
-    min-height: 100vh;
+    height: 100vh;
     transition: all ease .5s;
-    background-color: rgb(34, 31, 31);
     position: absolute;
     top: 0;
     left: 0;
@@ -32,4 +30,4 @@ const Container = styled.div`
 `
 
 
-export { Container };
+export { BgImage };

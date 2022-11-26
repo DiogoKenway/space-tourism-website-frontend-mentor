@@ -3,14 +3,13 @@ import imgDesktop from '../../../assets/destination/background-destination-deskt
 import imgTablet from '../../../assets/destination/background-destination-tablet.jpg';
 import imgMobile from '../../../assets/destination/background-destination-mobile.jpg';
 
-const BgContent = styled.div`
+const BgImage = styled.div`
     background: url(${imgDesktop}) center top no-repeat;
     background-size: cover;
     background-attachment: fixed;
     width: 100vw;
     height: 100vh;
     transition: all ease .5s;
-    background-color: rgb(34, 31, 31);
     position: absolute;
     top: 0;
     left: 0;
@@ -215,7 +214,7 @@ const InfoSlider = styled.div`
 
 export {
     Container,
-    BgContent,
+    BgImage,
     TitleImg,
     WrapperSlider,
     HeaderSlider,

@@ -3,15 +3,12 @@ import { useEffect } from 'react';
 import "@glidejs/glide/src/assets/sass/glide.core.scss";
 import Glide from '@glidejs/glide';
 
-import img0 from '../../../assets/destination/image-moon.webp';
-import img1 from '../../../assets/destination/image-mars.webp';
-import img2 from '../../../assets/destination/image-europa.webp';
-import img3 from '../../../assets/destination/image-titan.webp';
-import { destinations } from '../../../service/data.json'
+import { getImageByIndex, imagesPlanets } from '../../../utils/GetIndexImages';
 
+import { destinations } from '../../../service/data.json';
 
 import {
-    BgContent,
+    BgImage,
     Container,
     TitleImg,
     WrapperSlider,
@@ -24,7 +21,6 @@ import {
 
 const Destination = () => {
 
-    const imgs: string[] = [img0, img1, img2, img3];
 
     useEffect(() => {
         const glide = new Glide('#glide', {
@@ -36,12 +32,9 @@ const Destination = () => {
         glide.mount()
     }, []);
 
-
-    const getImageByIndex = (index: number): string => imgs[index];
-
     return (
         <>
-            <BgContent />
+            <BgImage />
             <div className="destination wrapper">
                 {
                     destinations ? (
@@ -54,7 +47,7 @@ const Destination = () => {
                                             <li className="glide__slide" key={index}>
                                                 <Container>
                                                     <TitleImg>
-                                                        <img src={getImageByIndex(index)} alt={item.name} />
+                                                        <img src={getImageByIndex(index, imagesPlanets)} alt={item.name} />
                                                     </TitleImg>
                                                     <WrapperSlider>
                                                         <HeaderSlider data-glide-el="controls[nav]">
