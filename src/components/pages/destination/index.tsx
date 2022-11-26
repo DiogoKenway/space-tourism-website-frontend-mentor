@@ -12,7 +12,6 @@ import { destinations } from '../../../service/data.json'
 
 import {
     BgContent,
-    WrapperDestination,
     Container,
     TitleImg,
     WrapperSlider,
@@ -46,7 +45,7 @@ const Destination = () => {
             <div className="destination wrapper">
                 {
                     destinations ? (
-                        <WrapperDestination id='glide'>
+                        <div id='glide'>
                             <div className="glide__track" data-glide-el="track">
                                 <ul className="glide__slides">
                                     {
@@ -83,7 +82,7 @@ const Destination = () => {
                                     }
                                 </ul>
                             </div>
-                        </WrapperDestination>
+                        </div>
                     ) : (<h1>CARREGANDO...</h1>)
                 }
             </div>

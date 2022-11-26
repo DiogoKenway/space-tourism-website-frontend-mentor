@@ -9,7 +9,6 @@ const BgContent = styled.div`
     background-attachment: fixed;
     width: 100vw;
     height: 100vh;
-    min-height: 100vh;
     transition: all ease .5s;
     background-color: rgb(34, 31, 31);
     position: absolute;
@@ -30,22 +29,12 @@ const BgContent = styled.div`
     }
 `
 
-const WrapperDestination = styled.div`
-    
-    @media(max-width: 768px) {
-        display: flex;
-        flex-direction: column;
-        width: 100%;
-        height: 100%;
-        // border: solid 1px #Aff;
-    }
-`
-
 const Container = styled.div`
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: center;
-    width: 75%;
+    width: 90%;
+    gap: 4rem;
     margin: auto;
     height: 85vh;
     // border: solid 1px #af22;
@@ -56,20 +45,16 @@ const Container = styled.div`
         align-items: center;
         width: 60%;
         height: 100%;
+        gap: 0;
     }
 `
 
 const TitleImg = styled.div`    
     display: flex;
     align-items: flex-end;
-    width: 50%;
+    width: 70%;
     padding: 1rem;
-
-    @media(max-width: 768px) {
-        width: 100%;
-        padding: 2rem;
-        justify-content: center;
-    }
+    // border: solid 1px #af22ff;
 
     @keyframes rotate {
         from {
@@ -82,9 +67,25 @@ const TitleImg = styled.div`
     }
 
     img {
-        width: 80%;
+        width: 100%;
         padding: 2rem;
         animation: rotate 30s infinite linear;
+    }
+
+    @media(max-width: 768px) {
+        width: 100%;
+        padding: 2rem;
+        justify-content: center;
+
+        img {
+            width: 90%;
+        }
+    }
+
+    @media(max-width: 450px) {
+        img {
+            width: 220px;
+        }
     }
 `
 
@@ -92,8 +93,8 @@ const WrapperSlider = styled.div`
     display: flex;
     flex-direction: column;
     justify-content: center;
-    width: 50%;
-    height: 70%;
+    width: 80%;
+    height: 60%;
     color: #FFF;
 
     @media(max-width: 768px) {
@@ -106,19 +107,17 @@ const WrapperSlider = styled.div`
 const HeaderSlider = styled.div`
     display: flex;
     gap: 1rem;
-    flex-wrapper: wrapper;
 
     button {
         display: block;
-        padding: .5rem;
         background-color: transparent;
         text-transform: uppercase;
-        letter-spacing: 9px;
+        letter-spacing: 7px;
         border: none;
         cursor: pointer;
         font-family: Barlow Condensed, sans-serif;
         font-weight: 300;
-        font-size: clamp(1.2vw, 1.5rem, 1.2rem);
+        font-size: clamp(1.2vw, 1.5rem, 1rem);
         color: rgba(255, 255, 255, .8);
         transition: all ease .5s;
 
@@ -127,6 +126,10 @@ const HeaderSlider = styled.div`
             border-bottom: 2px solid rgba(255, 255, 255, .3);
         }
     }
+
+    @media(max-width: 450px) {
+        gap: .6rem;
+    }
 `
 
 const ContentSlider = styled.div`
@@ -134,11 +137,16 @@ const ContentSlider = styled.div`
     flex-direction: column;
     justify-content: center;
     gap: 4rem;
-    width: 65%;
+    width: 70%;
     height: 100%;
+    // border: 1px solid #ffaacc;
 
     @media(max-width: 768px) {
         gap: 3rem;
+    }
+
+    @media(max-width: 450px) {
+        width: 95%
     }
 `
 
@@ -147,7 +155,7 @@ const TitleSlider = styled.div`
         font-family: 'Bellefair';
         font-style: normal;
         font-weight: 400;
-        font-size: 6vw;
+        font-size: 6.5vw;
         text-transform: uppercase;
     }
 
@@ -198,10 +206,14 @@ const InfoSlider = styled.div`
         gap: 0;
     }
 
+    @media(max-width: 450px) {
+        flex-direction: column;
+        gap: 3rem;
+    }
+
 `
 
 export {
-    WrapperDestination,
     Container,
     BgContent,
     TitleImg,
