@@ -42,8 +42,16 @@ const Container = styled.div`
     display: flex;
     justify-content: space-between;
     align-items: end;
-    margin: auto;
+    margin: 0 auto;
     // border: solid 1px #c1c1c1;   
+
+    @media(max-width: 768px) {
+        flex-direction: column;
+        width: 100%;
+        height: 100%;
+        // justify-content: start;
+        align-items: center;
+    }
 `
 
 const SectionInfo = styled.section`
@@ -53,7 +61,15 @@ const SectionInfo = styled.section`
     padding: 2rem 0;
     height: 100%;
     color: #FFF;
-    align-self: center;
+
+    @media(max-width: 768px) {
+        align-items: center;
+        padding: 0;
+        justify-content: start;
+        // border: solid 1px #444556;
+        width: 100%;
+        // height: 70%;
+    }
 `
 
 const RoleInformation = styled.div`
@@ -61,10 +77,9 @@ const RoleInformation = styled.div`
     flex-direction: column;
     align-items: flex-start;
     height: 40%;
-    width: 40%;
+    width: 40;
     gap: 1.5rem;
 
-    // border: solid 2px #11aa20;
 
     h2 {
         text-transform: uppercase;
@@ -85,16 +100,17 @@ const RoleInformation = styled.div`
         font-family: 'Bellefair';
         font-style: normal;
         font-weight: 400;
-        font-size: clamp(2.5vw, 3rem, 2rem);
+        font-size: clamp(2.5vw, 3rem, 1.5rem);
         line-height: 37px;
         opacity: .5;
+        text-transform: uppercase;
     }
     
     h1 {
         font-family: 'Bellefair';
         font-style: normal;
         font-weight: 400;
-        font-size: clamp(4vw, 3rem, 2rem);
+        font-size: clamp(4vw, 3rem, 2.3rem);
         line-height: 64px;
         text-transform: uppercase;
     }
@@ -107,12 +123,49 @@ const RoleInformation = styled.div`
         color: #D0D6F9;
         white-space: normal;
     }
+
+    @media(max-width: 768px) {
+        gap: .6rem;
+        align-items: center;
+        text-align: center;
+        justify-content: center;
+        // border: solid 2px #99bb20;
+        height: 70%;
+        width: 57%;
+
+        h2 {
+            margin-bottom: 0; 
+        }
+
+        h3 {
+            font-size: 1.5rem;
+        }
+        
+        h1 {
+            font-size: 40px;
+            line-height: 46px;
+            letter-spacing: 0px;
+        }
+        
+        p {            
+            font-size: 1rem;
+            line-height: 28px;
+            letter-spacing: 0px;
+        }
+
+    }
 `
 
 const NavigationPoints = styled.div`
     width: 200px;
     display: flex;
     gap: 1.25rem;
+    // border: solid 1px #123221;
+
+    @media(max-width: 768px) {
+        width: 100px;
+        align-items: center;
+    }
 `
 
 const Dot = styled.span`
@@ -121,17 +174,31 @@ const Dot = styled.span`
     border-radius: 100%;
     background-color: #363841;
     cursor: pointer;
+
+    @media(max-width: 768px) {
+        width: 10px;
+        height: 10px;
+    }
 `
 
 
 const SectionPhoto = styled.section`
-    // border: solid 1px red;
-    // padding: 0 8rem;
-
     transform: translateX(-250px);
     img {
         width: 135%;
-    }    
+    }
+
+    @media(max-width: 768px) {
+        display: flex;
+        justify-content: center;
+        // border: solid 1px #098;
+        transform: translate(-20px, -90px);
+
+        img {
+            width: 65%;
+            object-fit: cover;
+        }
+    }
 `
 
 export { 
