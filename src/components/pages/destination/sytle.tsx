@@ -51,7 +51,7 @@ const Container = styled.div`
 const TitleImg = styled.div`    
     display: flex;
     align-items: flex-end;
-    width: 70%;
+    width: 60%;
     padding: 1rem;
     // border: solid 1px #af22ff;
 

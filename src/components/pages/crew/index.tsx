@@ -1,10 +1,21 @@
-import { BgImage } from "./style";
-import { crew } from '../../../service/data.json';
+import "@glidejs/glide/src/assets/sass/glide.core.scss";
 import Glide from "@glidejs/glide";
 
 import { useEffect } from "react";
+import { crew } from '../../../service/data.json';
+
 import { imagesEmployees, getImageByIndex } from '../../../utils/GetIndexImages';
-import "@glidejs/glide/src/assets/sass/glide.core.scss";
+
+import {
+    BgImage,
+    GlideWrapper,
+    Container,
+    SectionInfo,
+    RoleInformation,
+    NavigationPoints,
+    SectionPhoto,
+    Dot
+} from "./style";
 
 const Crew = (props: any) => {
 
@@ -27,29 +38,27 @@ const Crew = (props: any) => {
                             <ul className="glide__slides">
                                 {crew.map((item, index) => (
                                     <li key={index}>
-                                        <main className="Container">
-                                            <div className="wrappper-crew">
-                                                <section className="title-page">
-                                                    <h2><strong>02</strong>meet your crew</h2>
-                                                </section>
-                                                <section className="role-information">
-                                                    <h3>{item.role}</h3>
-                                                    <h1>{item.name}</h1>
-                                                    <p>{item.bio}</p>
-                                                </section>z
-                                                <section className="navigation-points">       
-                                                    <nav data-glide-el="controls[nav]">
-                                                        <span data-glide-dir="=0">moon</span>
-                                                        <span data-glide-dir="=1">mars</span>
-                                                        <span data-glide-dir="=2">europa</span>
-                                                        <span data-glide-dir="=3">titan</span>
-                                                    </nav>
-                                                </section>
-                                                <section className="photo">
+                                        <GlideWrapper>
+                                            <Container>
+                                                <SectionInfo>
+                                                    <RoleInformation>
+                                                        <h2><strong>02</strong>meet your crew</h2>
+                                                        <h3>{item.role}</h3>
+                                                        <h1>{item.name}</h1>
+                                                        <p>{item.bio}</p>
+                                                    </RoleInformation>
+                                                    <NavigationPoints data-glide-el="controls[nav]">
+                                                        <Dot data-glide-dir="=0" />
+                                                        <Dot data-glide-dir="=1" />
+                                                        <Dot data-glide-dir="=2" />
+                                                        <Dot data-glide-dir="=3" />
+                                                    </NavigationPoints>
+                                                </SectionInfo>
+                                                <SectionPhoto>
                                                     <img src={getImageByIndex(index, imagesEmployees)} alt={item.name} />
-                                                </section>
-                                            </div>
-                                        </main>
+                                                </SectionPhoto>
+                                            </Container>
+                                        </GlideWrapper>
                                     </li>
                                 ))}
                             </ul>

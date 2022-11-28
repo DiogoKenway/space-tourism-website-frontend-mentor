@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom';
 import { useState, useEffect } from 'react';
+import { gsap } from "gsap";
 import logo from '../../assets/shared/logo.svg';
 import closeIcon from '../../assets/shared/icon-close.svg';
 import openIcon from '../../assets/shared/icon-hamburger.svg';
@@ -31,6 +32,13 @@ const Navbar = ({ currentRoute }: Routes) => {
         const [width, setWidth] = useState(getWidth());
 
         useEffect(() => {
+
+            const tl = gsap.timeline();
+    
+            
+            tl.fromTo("#logo", {y: 1500, opacity: 0}, {y: 0, opacity: 1}, 3)
+            tl.fromTo("#line", {x: 1500, opacity: 0}, {x: 0, opacity: 1}, 3.1)
+            tl.fromTo("#navbar", {y: -1500, opacity: 0}, {y: 0, opacity: 1}, 3.5)
        
             let timeoutId: any;
 
@@ -58,17 +66,17 @@ const Navbar = ({ currentRoute }: Routes) => {
     return (
         <WrapperHeader>
             <Logo>
-                <img src={logo} alt="logo do site" />
-                <hr />
+                <img id="logo" src={logo} alt="logo do site" />
+                <hr id="line"/>
             </Logo>
-            <MenuMobile
+            <MenuMobile 
                 style={showMenu || width > 450 ? { display: "none" } : { display: "initial" }}
                >
                 <img src={openIcon}
                     onClick={() => setShowMenu(!showMenu)}
                     alt="icone para abrir menu" />
             </MenuMobile>
-            <NavigationBar style={showMenu || width > 450 ? { right: "0" } : { right: "-100vw" }}>
+            <NavigationBar id="navbar" style={showMenu || width > 450 ? { right: "0" } : { right: "-100vw" }}>
                 <CloseIcon>
                     <img src={closeIcon}
                         alt="icone de fechar menu"

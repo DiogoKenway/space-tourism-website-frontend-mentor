@@ -12,7 +12,6 @@ import anousheh from '../assets/crew/image-anousheh-ansari.webp';
 
 const imagesEmployees: string[] = [douglas, mark, victor, anousheh];
 
-
 function getImageByIndex(index: number, list: string[]): string {
     return list[index];
 }

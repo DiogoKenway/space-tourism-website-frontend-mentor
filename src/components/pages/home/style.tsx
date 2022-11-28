@@ -122,8 +122,8 @@ const WrapperHome = styled.section`
 
 
 const BtnExplore = styled.div`
-    width: 18vw;
-    height: 18vw;
+    width: 17vw;
+    height: 17vw;
     border-radius: 100%;
     background-color: #FFF;
     margin-right: 5%;
@@ -152,9 +152,6 @@ const BtnExplore = styled.div`
     a {
         display: block;
         color: #000;
-        
-       
-        // text-align: center;
         text-transform: uppercase;
         font-family: 'Bellefair';
         font-style: normal;

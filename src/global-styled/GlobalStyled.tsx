@@ -15,6 +15,7 @@ const GlobalStyle = createGlobalStyle`
         height: 100vh;
         font-family: 'Barlow Condensed', sans-serif;
         overflow: hidden;
+        background-color: #0B0D19;
 
         &::-webkit-scrollbar {
             width: 8px;
@@ -61,7 +62,11 @@ const GlobalStyle = createGlobalStyle`
     }
 
     .glide__bullet--active {
-        border-bottom: 2px solid #FFF !important;
+        border-bottom: 2px solid #FFF;
+    }
+
+    span.glide__bullet--active {
+        background-color: #FFF;
     }
 `
 
