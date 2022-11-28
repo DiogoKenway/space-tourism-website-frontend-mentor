@@ -165,8 +165,8 @@ const CloseIcon = styled.div`
         cursor: pointer;
         padding: .5rem;
         position: absolute;
-        top: 2rem;
-        right: 30px;
+        top: 3%;
+        right: 8%;
     }
 `
 
