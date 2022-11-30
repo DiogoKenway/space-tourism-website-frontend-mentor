@@ -1,19 +1,41 @@
 import { useEffect, useState } from "react";
-import Glide from '@glidejs/glide';
 
-import { BgImage } from "./style";
+import "@glidejs/glide/src/assets/sass/glide.core.scss";
+import Glide from "@glidejs/glide";
+
 import { technology } from '../../../service/data.json';
 import { getImageByIndex, imagesRocketsDesktop } from "../../../utils/GetIndexImages";
+
+import { 
+    BgImage,
+    WrapperTecnology,
+    Container,
+    NavigationPoints,
+    Informations
+} from "./style";
 
 const Technology = (props: any) => {
 
     const [showMenu, setShowMenu] = useState(true);
+    
+    useEffect(() => {
+        const glide = new Glide("#glide",{
+            type: 'slider',
+            perView: 1
+        })
+
+        glide.mount()
+    }, [])
+
 
     const getWidth = (): number => window.innerWidth
         || document.documentElement.clientWidth
         || document.body.clientWidth;
 
+
+
     function useCurrentWidth(): number {
+
         const [width, setWidth] = useState(getWidth());
 
         useEffect(() => {
@@ -38,6 +60,7 @@ const Technology = (props: any) => {
                 window.removeEventListener('resize', resizeListener);
             }
 
+
         }, [])
 
         return width;
@@ -53,23 +76,22 @@ const Technology = (props: any) => {
                             <ul className="glide__slides">
                                 {technology.map((item, index) =>
                                     <li key={index}>
-                                        <div className="wrapper-tecnology">
-                                            <main className="container">
-                                                <section className="dots" data-glide-el="controls[nav]">
-                                                    <span data-glide-dir="=0" />
-                                                    <span data-glide-dir="=1" />
-                                                    <span data-glide-dir="=2" />
-                                                    <span data-glide-dir="=3" />
-                                                </section>
-                                                <section className="informations">
+                                        <WrapperTecnology>
+                                            <Container>
+                                                <NavigationPoints data-glide-el="controls[nav]">
+                                                    <span data-glide-dir="=0">1</span>
+                                                    <span data-glide-dir="=1">2</span>
+                                                    <span data-glide-dir="=2">3</span>                                                                                   
+                                                </NavigationPoints>
+                                                <Informations>
                                                     <h1>{item.name}</h1>
                                                     <p>{item.description}</p>
-                                                </section>
+                                                </Informations>
                                                 <section className="image">
-                                                    {getImageByIndex<string>(index, imagesRocketsDesktop)}
+                                                    <img src={getImageByIndex<string>(index, imagesRocketsDesktop)} alt="" />
                                                 </section>
-                                            </main>
-                                        </div>
+                                            </Container>
+                                        </WrapperTecnology>
                                     </li>
                                 )}
                             </ul>

@@ -14,7 +14,7 @@ const imagesEmployees: string[] = [douglas, mark, victor, anousheh];
 
 import launch from "../assets/technology/image-launch-vehicle-portrait.jpg";
 import capsule from "../assets/technology/image-space-capsule-portrait.jpg";
-import spaceport from '../assets/technology/image-spaceport-portrait.jpg';
+import spaceport from "../assets/technology/image-spaceport-portrait.jpg";
 
 const imagesRocketsDesktop: string[] = [launch, capsule, spaceport];
 

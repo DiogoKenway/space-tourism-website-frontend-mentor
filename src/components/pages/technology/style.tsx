@@ -29,6 +29,49 @@ const BgImage = styled.div`
     }
 `
 
+const WrapperTecnology = styled.main`
+    width: 100vw;
+    height: 100vh;
+`
 
+const Container = styled.div`
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    align-items: center;
+    justify-content: center;
+    width: 105%;
+    height: 100%;
+    border: solid 1px #882221;
+    margin: 0 auto;
+`
 
-export { BgImage };
+const NavigationPoints = styled.div`
+    display: flex;
+    flex-direction: column;
+
+    span {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 80px;
+        width: 80px;
+        border-radius: 100%;
+        cursor: pointer;
+    }
+`
+
+const Informations = styled.div`
+    display: flex;
+    flex-direction: column;
+    width: 30%;
+
+    h1 {
+
+    }
+
+    p {
+        white-space: normal;
+    }
+`
+
+export { BgImage, WrapperTecnology, Container, NavigationPoints, Informations };
