@@ -55,7 +55,7 @@ const Crew = (props: any) => {
                                                     </NavigationPoints>
                                                 </SectionInfo>
                                                 <SectionPhoto>
-                                                    <img src={getImageByIndex(index, imagesEmployees)} alt={item.name} />
+                                                    <img src={getImageByIndex<string>(index, imagesEmployees)} alt={item.name} />
                                                 </SectionPhoto>
                                             </Container>
                                         </GlideWrapper>

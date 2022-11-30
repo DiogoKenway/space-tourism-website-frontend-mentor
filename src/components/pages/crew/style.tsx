@@ -8,6 +8,7 @@ const BgImage = styled.div`
     background: url(${imgDesktop}) center top no-repeat;
     background-size: cover;
     background-attachment: fixed;
+    background-color: #0A0C18;
     width: 100vw;
     height: 100vh;
     transition: all ease .5s;

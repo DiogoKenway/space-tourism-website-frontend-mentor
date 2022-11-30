@@ -20,9 +20,8 @@ type Routes = {
 }
 
 const Navbar = ({ currentRoute }: Routes) => {
-
+    
     const [showMenu, setShowMenu] = useState(true);
-
 
     const getWidth = () :number => window.innerWidth
         || document.documentElement.clientWidth
@@ -32,9 +31,7 @@ const Navbar = ({ currentRoute }: Routes) => {
         const [width, setWidth] = useState(getWidth());
 
         useEffect(() => {
-
             const tl = gsap.timeline();
-    
             
             tl.fromTo("#logo", {y: 1500, opacity: 0}, {y: 0, opacity: 1}, 3)
             tl.fromTo("#line", {x: 1500, opacity: 0}, {x: 0, opacity: 1}, 3.1)
@@ -60,8 +57,7 @@ const Navbar = ({ currentRoute }: Routes) => {
         return width;
     }
 
-    const width = useCurrentWidth();
-    
+    const width: number = useCurrentWidth();
 
     return (
         <WrapperHeader>
@@ -84,10 +80,10 @@ const Navbar = ({ currentRoute }: Routes) => {
                 </CloseIcon>
                 <li>
                     <Link to="/"
-                        style={currentRoute === ""
-                            ? { borderBottom: "solid 2px white" }
-                            : { borderBottom: "solid 2px transparent" }
-                        }><strong>0 0</strong>&nbsp; H O M E</Link>
+                        style={ currentRoute === ""
+                         ? { borderBottom: "solid 2px #FFF"}
+                         : { borderBottom: "solid 2px transparent" } }
+                        ><strong>0 0</strong>&nbsp; H O M E</Link>
                 </li>
                 <li>
                     <Link to="/destination"

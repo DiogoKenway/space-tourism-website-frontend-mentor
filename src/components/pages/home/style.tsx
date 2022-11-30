@@ -7,111 +7,124 @@ const BgContent = styled.div`
     background: url(${imgDesktop}) center center no-repeat;
     background-size: cover;
     width: 100vw;
-    min-height: 100vh;
-    transition: all ease .5s;
+    height: 100vh;
     position: absolute;
     top: 0;
     left: 0;
     z-index: -1;
 
     @media(max-width: 768px) {
-        background: url(${imgTablet}) center top no-repeat;
+        background: url(${imgTablet}) center center no-repeat;
         background-size: cover;
         background-attachment: fixed;
     }
 
     @media(max-width: 450px) {
-        background: url(${imgMobile}) center top no-repeat;
+        background: url(${imgMobile}) center center no-repeat;
         background-size: cover;
         background-attachment: fixed;
     }
 `
 
 const WrapperHome = styled.section`
-    width: 90%;
+    width: 85%;
     margin: 0 auto;
     display: flex;
     align-items: flex-end;
     justify-content: space-between;
-    height: 80vh;
+    height: 75vh;
     // border: solid 3px #f1f2;
+    padding-bottom: 3rem;
 
     @media(max-width: 768px) {
         flex-direction: column;
         align-items: center;
         justify-content: center;
-        height: 95vh;
-        gap: 8rem;
+        height: 100vh;
+        width: 100vw;
+        gap: 2rem;
     }
 
     @media(max-width: 450px) {
         width: 100%;
         height: 95vh;
         justify-content: space-around;
-        padding: 5rem;
+        padding: 2rem;
+        // border: solid 3px #f1f2;
     }
 `
-    
-    const InfoHome = styled.div`
-    width: 45%;
+
+const InfoHome = styled.div`
+    width: 40%;
     display: flex;
     flex-direction: column;
+    padding: 0 3rem;
     align-items: center;
     color: #FFF;
-    // border: solid 1px #f23;
-    
-        span {
-            text-transform: uppercase;
-            margin-bottom: 3rem;
-            color: #D0D6F9;
-            font-size: clamp(2vw, 2rem, 1.5rem);
-            letter-spacing: 8px;
-            text-align: center;
+    border: solid 1px #f23;
 
-            @media(max-width: 450px) {
-                margin: 0;
-            }
-        }
-
-    @media(max-width: 768px) {
-        width: 70%;
-    }
-
-    @media(max-width: 450px) {
-        width: 70%;
-        height: 35vh;
+    span {
+        text-transform: uppercase;
+        margin-bottom: 1rem;
+        color: #D0D6F9;
+        font-size: clamp(1.5vw, 2rem, 1.5rem);
+        letter-spacing: 8px;
+        text-align: center;
     }
 
     h1 {
         font-family: 'Bellefair', serif;
-        font-size: clamp(10vw, 15rem, 8rem);
+        font-size: clamp(9vw, 13rem, 8rem);
+        // font-size: 9vw;
+
         font-weight: 400;
         line-height: 172px;
         text-transform: uppercase;
-        margin-bottom: 2rem;
-
-        @media(max-width: 768px) {
-            margin-bottom: .8rem;
-            font-size: 9.4rem;
-        }
-
-        @media(max-width: 450px) {
-            margin: 0rem;
-            font-size: 80px;
-        }
+        letter-spacing: 0px;
     }
 
     p {
-        max-width: 590px;
-        min-width: 330px;
-        text-align: start;
-        font-size: 1.5rem;
-        line-height: 40px;
-        font-weight: 400;
         font-family: 'Barlow';
+        font-size: 1.2rem;
+        font-weight: 400;
         color: #D0D6F9;
+        
+        line-height: 28px;
+        letter-spacing: 0px;
 
-        @media(max-width: 768px) {
+    }
+    
+
+    @media(max-width: 768px) {
+        width: 60%;
+        height: 50%;
+
+        h1 {
+            margin-bottom: .8rem; 
+            font-size: 9.4rem;
+        }
+
+        p {
+            text-align: center;
+        }
+    }
+
+
+    @media(max-width: 450px) {
+        width: 100%;
+        height: 40%;
+
+
+        span {
+            margin: 0;
+        }
+
+        h1 {
+            margin: 0rem;
+            font-size: 80px;
+        }
+
+        p {
             font-size: 1rem;
             line-height: 28px;
             text-align: center;
@@ -122,8 +135,8 @@ const WrapperHome = styled.section`
 
 
 const BtnExplore = styled.div`
-    width: 17vw;
-    height: 17vw;
+    width: 275px;
+    height: 275px;
     border-radius: 100%;
     background-color: #FFF;
     margin-right: 5%;
@@ -139,9 +152,8 @@ const BtnExplore = styled.div`
     }
 
     @media(max-width: 450px) {
-        width: 60vw;
-        height: 60vw;
-        justify-self: start;
+        width: 200px;
+        height: 200px;
     }
 
     &:hover {

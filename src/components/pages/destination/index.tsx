@@ -46,7 +46,7 @@ const Destination = () => {
                                             <li className="glide__slide" key={index}>
                                                 <Container>
                                                     <TitleImg>
-                                                        <img src={getImageByIndex(index, imagesPlanets)} alt={item.name} />
+                                                        <img src={getImageByIndex<string>(index, imagesPlanets)} alt={item.name} />
                                                     </TitleImg>
                                                     <WrapperSlider>
                                                         <HeaderSlider data-glide-el="controls[nav]">
