@@ -11,7 +11,8 @@ import {
     WrapperTecnology,
     Container,
     NavigationPoints,
-    Informations
+    Informations,
+    ContainerImage
 } from "./style";
 
 const Technology = (props: any) => {
@@ -77,19 +78,19 @@ const Technology = (props: any) => {
                                 {technology.map((item, index) =>
                                     <li key={index}>
                                         <WrapperTecnology>
-                                            <Container>
-                                                <NavigationPoints data-glide-el="controls[nav]">
-                                                    <span data-glide-dir="=0">1</span>
-                                                    <span data-glide-dir="=1">2</span>
-                                                    <span data-glide-dir="=2">3</span>                                                                                   
-                                                </NavigationPoints>
-                                                <Informations>
-                                                    <h1>{item.name}</h1>
-                                                    <p>{item.description}</p>
-                                                </Informations>
-                                                <section className="image">
+                                            <Container>                                         
+                                                    <NavigationPoints data-glide-el="controls[nav]">
+                                                        <span data-glide-dir="=0">1</span>
+                                                        <span data-glide-dir="=1">2</span>
+                                                        <span data-glide-dir="=2">3</span>                                                                                   
+                                                    </NavigationPoints>
+                                                    <Informations>
+                                                        <h1>{item.name}</h1>
+                                                        <p>{item.description}</p>
+                                                    </Informations>                                              
+                                                <ContainerImage>
                                                     <img src={getImageByIndex<string>(index, imagesRocketsDesktop)} alt="" />
-                                                </section>
+                                                </ContainerImage>
                                             </Container>
                                         </WrapperTecnology>
                                     </li>

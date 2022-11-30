@@ -61,7 +61,7 @@ const InfoHome = styled.div`
     padding: 0 3rem;
     align-items: center;
     color: #FFF;
-    border: solid 1px #f23;
+    // border: solid 1px #f23;
 
     span {
         text-transform: uppercase;

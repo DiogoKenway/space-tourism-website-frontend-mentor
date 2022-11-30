@@ -67,6 +67,7 @@ const GlobalStyle = createGlobalStyle`
 
     span.glide__bullet--active {
         background-color: #FFF;
+        color: black !important;
     }
 `
 
