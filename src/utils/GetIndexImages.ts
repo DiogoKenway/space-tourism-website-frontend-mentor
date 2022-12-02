@@ -13,16 +13,16 @@ import anousheh from '../assets/crew/image-anousheh-ansari.webp';
 const imagesEmployees: string[] = [douglas, mark, victor, anousheh];
 
 import launch from "../assets/technology/image-launch-vehicle-portrait.jpg";
-import capsule from "../assets/technology/image-space-capsule-portrait.jpg";
 import spaceport from "../assets/technology/image-spaceport-portrait.jpg";
+import capsule from "../assets/technology/image-space-capsule-portrait.jpg";
 
-const imagesRocketsDesktop: string[] = [launch, capsule, spaceport];
+const imagesRocketsDesktop: string[] = [launch, spaceport, capsule];
 
 import launchLand from "../assets/technology/image-launch-vehicle-landscape.jpg";
 import capsuleLand from "../assets/technology/image-space-capsule-landscape.jpg";
 import spaceportLand from '../assets/technology/image-spaceport-landscape.jpg';
 
-const RocketsSmallerDevices: string[] = [launchLand, capsuleLand, spaceportLand]
+const RocketsSmallerDevices: string[] = [launchLand, spaceportLand, capsuleLand]
 
 function getImageByIndex<T>(index: number, list: T[]) :T {
     return list[index];

@@ -37,13 +37,44 @@ const WrapperTecnology = styled.main`
 const Container = styled.div`
     display: flex;
     align-items: center;
-    width: 90%;
+    width: 80%;
     height: 90%;
     gap: 4rem;
     // border: solid 1px #882221;
     margin: 0 auto;
+    position: relative;
+
+    @media(max-width: 768px) {
+        width: 100%;
+        flex-direction: column;
+        padding: .5rem 0;
+        gap: 2rem;
+    }
 `
 
+const PageTitle = styled.div`
+    position: absolute;
+    top: 12%;
+    left: 8%;
+
+    h2 {
+        text-transform: uppercase;
+        margin-bottom: 1rem;
+        color: #D0D6F9;
+        font-size: clamp(3vw,3rem,2rem);
+        letter-spacing: 8px;
+        font-weight: 200;
+        
+        strong {
+            color: #FFF;
+        }
+    }
+
+    @media(max-width: 768px) {
+        position: static;
+        order: -2;
+    }
+`
 
 const NavigationPoints = styled.div`
     display: flex;
@@ -51,7 +82,6 @@ const NavigationPoints = styled.div`
     gap: 2rem;
     align-items: center;
     width: 40%;
-    // flex: 2;
     justify-self: center;
     // border: solid 1px #112221;
 
@@ -60,8 +90,8 @@ const NavigationPoints = styled.div`
         display: flex;
         justify-content: center;
         align-items: center;
-        height: 90px;
-        width: 90px;
+        height: 100px;
+        width: 100px;
         border-radius: 100%;
         cursor: pointer;
         font-family: Bellefair;
@@ -69,10 +99,25 @@ const NavigationPoints = styled.div`
         font-weight: 400;
         line-height: 37px;
         letter-spacing: 2px;
-        text-align: center;
-        border: solid 1px #FFF;
         color: #FFF;
-        
+        border: solid 1px #FFF;
+    }
+
+    @media(max-width: 768px) {
+        flex-direction: row;
+        width: 100%;
+        justify-content: center;
+
+        span {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 60px;
+            width: 60px;
+            font-size: 1.25rem;
+            line-height: 28px;
+            letter-spacing: 1.5px;
+        }
     }
 `
 
@@ -96,28 +141,57 @@ const Informations = styled.div`
     p {
         white-space: normal;
         font-family: Barlow;
-        font-size: 18px;
+        font-size: 1.25rem;
         font-weight: 400;
         line-height: 32px;
         letter-spacing: 0px;
-        // text-align: left;
         color: #D0D6F9;
         
+    }
+
+    @media(max-width: 768px) {
+        width: 60%;
+        align-items: center;
+
+        h1 {
+            font-family: Bellefair;
+            font-size: 2.2rem;
+            font-weight: 400;
+            line-height: 46px;
+            letter-spacing: 0px;
+            text-align: center;
+        }
+
+        p {
+            font-family: Barlow;
+            font-size: 16px;
+            font-weight: 400;
+            line-height: 28px;
+            letter-spacing: 0px;
+            text-align: center;
+            
+        }
     }
 `
 
 const ContainerImage = styled.section`
-    width: 80%;
+    width: 100%;
     // border: solid 1px #551121;
 
     img {
-        width: 100%;
+        width: 101%;
     }
+
+    @media(max-width: 768px) {
+        order: -1;
+    }
+
 `
 
 export { BgImage,
     WrapperTecnology,
     Container,
+    PageTitle,
     NavigationPoints,
     Informations,
     ContainerImage

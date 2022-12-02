@@ -118,7 +118,7 @@ const RoleInformation = styled.div`
 
         strong {
             margin-right: 1rem;
-            font-weight: 100;
+            color: #FFF;
         }
     }
 

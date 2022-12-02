@@ -15,6 +15,7 @@ import {
     BgImage,
     WrapperTecnology,
     Container,
+    PageTitle,
     NavigationPoints,
     Informations,
     ContainerImage
@@ -84,6 +85,9 @@ const Technology = (props: any) => {
                                     <li key={index}>
                                         <WrapperTecnology>
                                             <Container>
+                                                <PageTitle>
+                                                    <h2><strong>03</strong> Space launch 101</h2>
+                                                </PageTitle>
                                                 <NavigationPoints data-glide-el="controls[nav]">
                                                     <span data-glide-dir="=0">1</span>
                                                     <span data-glide-dir="=1">2</span>
@@ -94,7 +98,7 @@ const Technology = (props: any) => {
                                                     <p>{item.description}</p>
                                                 </Informations>
                                                 <ContainerImage>
-                                                    <img src={ width < 1000
+                                                    <img src={ width <= 768
                                                         ? getImageByIndex<string>(index, RocketsSmallerDevices)
                                                         : getImageByIndex<string>(index, imagesRocketsDesktop)} alt={item.name} />
                                                 </ContainerImage>
