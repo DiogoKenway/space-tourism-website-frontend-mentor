@@ -37,6 +37,13 @@ const GlideWrapper = styled.div`
     
     // border: solid 1px #c030c3;
 
+    @media(max-width: 768px) {
+
+        // display: flex;
+        // align-items: center;
+        // justify-content: center;
+    }
+
     @media(max-width: 450px) {
         display: flex;
         flex-direction: column;
@@ -61,6 +68,7 @@ const Container = styled.div`
         width: 100%;
         height: 100%;
         align-items: center;
+        justify-content: end;
     }
 
     @media(max-width: 450px) {
@@ -78,12 +86,13 @@ const SectionInfo = styled.section`
     justify-content: space-around;
     padding: 2rem 0;
     height: 100%;
+    // border: solid 3px #444556;
     color: #FFF;
+    position: relative;
 
     @media(max-width: 768px) {
         align-items: center;
-        padding: 0;
-        justify-content: start;
+        justify-content: end;
         width: 100%;
     
     }
@@ -92,7 +101,6 @@ const SectionInfo = styled.section`
         align-items: center;
         // padding: 4rem;
         justify-content: start;
-        // border: solid 1px #444556;
         // width: 70%;
         // height: 70%;
     }
@@ -153,11 +161,11 @@ const RoleInformation = styled.div`
     @media(max-width: 768px) {
         gap: .6rem;
         align-items: center;
-        text-align: center;
+        // text-align: center;
         justify-content: center;
-        // border: solid 2px #99bb20;
-        height: 70%;
-        width: 57%;
+        // border: solid 1px #99bb20;
+        height: 100%;
+        width: 60%;
 
         h2 {
             margin-bottom: .5rem; 
@@ -219,6 +227,8 @@ const NavigationPoints = styled.div`
     @media(max-width: 768px) {
         width: 100px;
         align-items: center;
+        position: absolute;
+        top: 75%;
     }
 
     @media(max-width: 450px) {
@@ -248,13 +258,15 @@ const SectionPhoto = styled.section`
     }
 
     @media(max-width: 768px) {
+        width: 100%;
         display: flex;
         justify-content: center;
+        align-items: center;
         // border: solid 1px #098;
         transform: translate(0px, -100px);
 
         img {
-            width: 65%;
+            width: 70%;
         }
     }
 

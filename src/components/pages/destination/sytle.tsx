@@ -39,12 +39,11 @@ const Container = styled.div`
     display: flex;
     justify-content: space-around;
     align-items: center;
-    width: 80%;
-    padding: 2rem 0;
+    width: 70%;
+    padding: 4rem 0;
     gap: 4rem;
-    // margin: auto;
-    height: 100%;
-    border: solid 1px #af22;
+    margin: 0 auto;
+    // border: solid 1px #af22;
 
     @media(max-width: 768px) {
         flex-direction: column;
@@ -105,7 +104,6 @@ const ContainerImg = styled.div`
 const HeaderSlider = styled.div`
     display: flex;
     gap: 1rem;
-    justify-content: center;
 
     button {
         display: block;
@@ -126,6 +124,11 @@ const HeaderSlider = styled.div`
         }
     }
 
+    @media(max-width: 768px) {
+        justify-content: center;
+        gap: .6rem;
+    }
+
     @media(max-width: 450px) {
         gap: .6rem;
     }
@@ -134,8 +137,7 @@ const HeaderSlider = styled.div`
 const ContentSlider = styled.div`
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    gap: 4rem;
+    gap: 2rem;
     width: 70%;
     height: 100%;
     // border: 1px solid #ffaacc;
