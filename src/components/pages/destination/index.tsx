@@ -11,6 +11,8 @@ import {
     BgImage,
     WrapperDestination,
     Container,
+    HeaderPage,
+    PageTitle,
     ContainerImg,
     HeaderSlider,
     ContentSlider,
@@ -45,10 +47,15 @@ const Destination = () => {
                                         destinations.map((item, index) => (
                                             <li className="glide__slide" key={index}>
                                                 <WrapperDestination>
-                                                    <Container>
-                                                        <ContainerImg>
-                                                            <img src={getImageByIndex<string>(index, imagesPlanets)} alt={item.name} />
-                                                        </ContainerImg>
+                                                    <Container> 
+                                                        <HeaderPage>
+                                                            <PageTitle>
+                                                                <h2><strong>02</strong> Pick your destination</h2>
+                                                            </PageTitle>
+                                                            <ContainerImg>
+                                                                <img src={getImageByIndex<string>(index, imagesPlanets)} alt={item.name} />
+                                                            </ContainerImg>
+                                                        </HeaderPage>
                                                         <ContentSlider>
                                                             <HeaderSlider data-glide-el="controls[nav]">
                                                                 <button data-glide-dir="=0">moon</button>

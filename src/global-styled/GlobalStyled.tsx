@@ -24,27 +24,13 @@ const GlobalStyle = createGlobalStyle`
         }
 
         &::-webkit-scrollbar-thumb {
-            background-color: #ccc;
-            border-radius: 4px;
-
-            &:hover {
-                background-color: #b3b3b3;
-                box-shadow: 0 0 2px 1px rgba(0, 0, 0, .2);
-            }
-
-            &:active {
-                background-color: #999;
-            }
+            background-color: #0A0C18;
+            border-radius: 4px;  
         }
  
         &::-webkit-scrollbar-track {
-            background-color: #e1e1e1;
+            background-color: #FFF;
             border-radius: 4px;
-
-            &:hover,
-            &:active {
-                background-color: #d4d4d4;
-            }
         }
 
         

@@ -35,12 +35,14 @@ const WrapperDestination = styled.div`
     align-items: center;
 `
 
+
 const Container = styled.div`
     display: flex;
-    justify-content: space-around;
-    align-items: center;
-    width: 70%;
-    padding: 4rem 0;
+    justify-content: center;
+    // align-items: center;
+    width: 80%;
+    height: 80%;
+    padding: 2rem 0;
     gap: 4rem;
     margin: 0 auto;
     // border: solid 1px #af22;
@@ -56,35 +58,65 @@ const Container = styled.div`
     }
 `
 
+const HeaderPage = styled.div`
+    display:  flex;
+    flex-direction:  column;
+    gap: 1rem;
+    align-items: center;
+    // border: solid 1px #aaff; 
+    width: 100%;
+    // height: 100%;
+    text-align: center;
+   
+
+    @media(max-width: 768px) {
+        justify-content: center;
+        align-items: center;
+        width: 70%;
+        gap: 2rem;
+        padding: 0;
+    }
+`
+const PageTitle = styled.div`
+    h2 {
+        text-transform: uppercase;
+        color: #D0D6F9;
+        font-size: clamp(3vw,3rem,2rem);
+        letter-spacing: 8px;
+        font-weight: 200;
+    }
+
+    strong {
+        color: white;
+    }
+
+    @media(max-width: 768px) {
+        text-align: center;
+    }
+`
+
 const ContainerImg = styled.div`    
     display: flex;
-    align-items: flex-end;
-    width: 60%;
-    padding: 1rem;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    // padding: 1rem;
     // border: solid 1px #af22ff;
     z-index: -1;
 
-    @keyframes rotate {
-        from {
-            tranform: rotate(0);
-        }
-
-        to {
-            transform: rotate(360deg)
-        }
-    }
-
     img {
-        width: 100%;
+        width: 65%;
         // padding: 2rem;
         animation: rotate 30s infinite linear;
     }
 
     @media(max-width: 768px) {
-        width: 70%;
-        height: 25%;
+        width: 100%;
+        height: 100%;
         justify-content: center;
         margin-bottom: 2rem;
+        align-items: flex-end;
+        padding: 0;
 
         img {
             width: 70%;
@@ -96,6 +128,16 @@ const ContainerImg = styled.div`
         height: 5%;
         img {
             width: 100%;
+        }
+    }
+
+    @keyframes rotate {
+        from {
+            tranform: rotate(0);
+        }
+
+        to {
+            transform: rotate(360deg)
         }
     }
 `
@@ -137,10 +179,12 @@ const HeaderSlider = styled.div`
 const ContentSlider = styled.div`
     display: flex;
     flex-direction: column;
+    justify-content: center;
+    // align-items: center;
     gap: 2rem;
     width: 70%;
     height: 100%;
-    // border: 1px solid #ffaacc;
+    // border: 1px solid #ffaacc; 
 
     @media(max-width: 768px) {
         gap: 0rem;
@@ -227,6 +271,8 @@ export {
     BgImage,
     Container,
     WrapperDestination,
+    HeaderPage,
+    PageTitle,
     ContainerImg,
     HeaderSlider,
     ContentSlider,
