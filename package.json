@@ -22,6 +22,7 @@
   },
   "devDependencies": {
     "@types/glidejs__glide": "^3.4.3",
+    "@types/node": "^18.11.10",
     "@types/react": "^18.0.24",
     "@types/react-dom": "^18.0.8",
     "@types/styled-components": "^5.1.26",
