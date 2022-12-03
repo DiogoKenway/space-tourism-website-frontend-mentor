@@ -62,7 +62,7 @@ const GlobalStyle = createGlobalStyle`
     }
 
     .glide__bullet--active {
-        border-bottom: 2px solid #FFF;
+        border-bottom: 2px solid #FFF !important;
     }
 
     span.glide__bullet--active {

@@ -9,13 +9,13 @@ import { destinations } from '../../../service/data.json';
 
 import {
     BgImage,
+    WrapperDestination,
     Container,
-    TitleImg,
-    WrapperSlider,
+    ContainerImg,
     HeaderSlider,
     ContentSlider,
     InfoSlider,
-    TitleSlider
+    SliderTitle
 } from "./sytle";
 
 
@@ -44,30 +44,31 @@ const Destination = () => {
 
                                         destinations.map((item, index) => (
                                             <li className="glide__slide" key={index}>
-                                                <Container>
-                                                    <TitleImg>
-                                                        <img src={getImageByIndex<string>(index, imagesPlanets)} alt={item.name} />
-                                                    </TitleImg>
-                                                    <WrapperSlider>
-                                                        <HeaderSlider data-glide-el="controls[nav]">
-                                                            <button data-glide-dir="=0">moon</button>
-                                                            <button data-glide-dir="=1">mars</button>
-                                                            <button data-glide-dir="=2">europa</button>
-                                                            <button data-glide-dir="=3">titan</button>
-                                                        </HeaderSlider>
+                                                <WrapperDestination>
+                                                    <Container>
+                                                        <ContainerImg>
+                                                            <img src={getImageByIndex<string>(index, imagesPlanets)} alt={item.name} />
+                                                        </ContainerImg>
                                                         <ContentSlider>
-                                                            <TitleSlider>
+                                                            <HeaderSlider data-glide-el="controls[nav]">
+                                                                <button data-glide-dir="=0">moon</button>
+                                                                <button data-glide-dir="=1">mars</button>
+                                                                <button data-glide-dir="=2">europa</button>
+                                                                <button data-glide-dir="=3">titan</button>
+                                                            </HeaderSlider>
+                                                            <SliderTitle>
                                                                 <h1>{item.name}</h1>
                                                                 <p>{item.description}</p>
                                                                 <hr />
-                                                            </TitleSlider>
+                                                            </SliderTitle>
                                                             <InfoSlider>
                                                                 <span>{item.distance}</span>
                                                                 <span>{item.travel}</span>
                                                             </InfoSlider>
                                                         </ContentSlider>
-                                                    </WrapperSlider>
-                                                </Container>
+                                                    </Container>
+
+                                                </WrapperDestination>
                                             </li>
                                         ))
 

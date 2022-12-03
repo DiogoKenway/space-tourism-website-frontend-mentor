@@ -32,6 +32,7 @@ const BgImage = styled.div`
 const WrapperTecnology = styled.main`
     width: 100vw;
     height: 100vh;
+    
 `
 
 const Container = styled.div`
@@ -45,7 +46,8 @@ const Container = styled.div`
     position: relative;
 
     @media(max-width: 768px) {
-        width: 100%;
+        justify-content: center;
+        width: 100vw;
         flex-direction: column;
         padding: .5rem 0;
         gap: 2rem;
@@ -150,7 +152,7 @@ const Informations = styled.div`
     }
 
     @media(max-width: 768px) {
-        width: 60%;
+        width: 60vw;
         align-items: center;
 
         h1 {
