@@ -1,4 +1,4 @@
-import { useEffect } from 'react';
+import React, { useEffect } from 'react';
 
 import "@glidejs/glide/src/assets/sass/glide.core.scss";
 import Glide from '@glidejs/glide';

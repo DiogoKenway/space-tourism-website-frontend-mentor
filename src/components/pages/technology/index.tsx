@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import React, { useEffect, useState } from "react";
 import gsap from "gsap";
 
 import "@glidejs/glide/src/assets/sass/glide.core.scss";

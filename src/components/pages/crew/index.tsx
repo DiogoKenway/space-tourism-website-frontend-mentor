@@ -1,7 +1,8 @@
+import React, { useEffect } from "react";
+
 import "@glidejs/glide/src/assets/sass/glide.core.scss";
 import Glide from "@glidejs/glide";
 
-import { useEffect } from "react";
 import { crew } from '../../../service/data.json';
 
 import { imagesEmployees, getImageByIndex } from '../../../utils/GetIndexImages';

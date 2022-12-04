@@ -1,3 +1,4 @@
+import React from "react";
 import { Link } from 'react-router-dom';
 import { useState, useEffect } from 'react';
 import { gsap } from "gsap";
@@ -79,7 +80,7 @@ const Navbar = ({ currentRoute }: Routes) => {
                         onClick={() => setShowMenu(!showMenu)} />
                 </CloseIcon>
                 <li>
-                    <Link to="/"
+                    <Link to=""
                         style={ currentRoute === ""
                          ? { borderBottom: "solid 2px #FFF"}
                          : { borderBottom: "solid 2px transparent" } }

@@ -1,3 +1,4 @@
+import React from "react";
 import GlobalStyle from "./global-styled/GlobalStyled";
 import { Routes, Route, useLocation } from 'react-router-dom';
 
@@ -19,7 +20,7 @@ function App() {
       <GlobalStyle />
       <Navbar currentRoute={newLocation}/>
       <Routes>
-        <Route path="/" element={<Home dataApi={dataApi} />} />
+        <Route path="" element={<Home dataApi={dataApi} />} />
         <Route path="/destination" element={<Destination />} />
         <Route path="/crew" element={<Crew dataApi={dataApi} />} />
         <Route path="/technology" element={<Technology dataApi={dataApi} />} />
