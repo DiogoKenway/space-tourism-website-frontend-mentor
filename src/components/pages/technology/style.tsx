@@ -76,6 +76,14 @@ const PageTitle = styled.div`
         position: static;
         order: -2;
     }
+
+    @media(max-width: 450px) {
+        
+
+        h2 {
+            font-size: 1.6rem;  
+        }
+    }
 `
 
 const NavigationPoints = styled.div`
@@ -119,6 +127,15 @@ const NavigationPoints = styled.div`
             font-size: 1.25rem;
             line-height: 28px;
             letter-spacing: 1.5px;
+        }
+    }
+
+    @media(max-width: 450px) {
+        
+        span {
+            height: 40px;
+            width: 40px;
+            font-size: 1rem;
         }
     }
 `
@@ -172,6 +189,20 @@ const Informations = styled.div`
             letter-spacing: 0px;
             text-align: center;
             
+        }
+    }
+
+    @media(max-width: 450px) {
+        h1 {
+            font-size: 24px;
+            font-weight: 400;
+            line-height: 28px;
+
+        }
+        
+        p {
+            font-size: 15px;
+            line-height: 25px;
         }
     }
 `

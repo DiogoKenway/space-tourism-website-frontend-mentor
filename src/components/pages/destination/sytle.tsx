@@ -56,6 +56,12 @@ const Container = styled.div`
         gap: 0;
         padding: 0;
     }
+
+    @media(max-width: 450px) {
+        padding: 2rem;
+    }
+
+
 `
 
 const HeaderPage = styled.div`
@@ -76,6 +82,14 @@ const HeaderPage = styled.div`
         gap: 2rem;
         padding: 0;
     }
+
+    @media(max-width: 450px) {
+        justify-content: space-between;
+        align-items: center;
+        width: 70%;
+        gap: 1.5rem;
+        padding: 0;
+    }
 `
 const PageTitle = styled.div`
     h2 {
@@ -93,6 +107,7 @@ const PageTitle = styled.div`
     @media(max-width: 768px) {
         text-align: center;
     }
+
 `
 
 const ContainerImg = styled.div`    
@@ -214,7 +229,8 @@ const SliderTitle = styled.div`
         font-size: 1.25rem;
         line-height: 32px;
         color: #D0D6F9;
-        padding-bottom: 3rem;        
+        padding-bottom: 3rem;  
+
     }
 
     hr {
@@ -225,6 +241,7 @@ const SliderTitle = styled.div`
     @media(max-width: 768px) {
         text-align: center;
         margin-bottom: 2rem;
+
         h1 {
             color: #FFF;
             font-size: 5rem;
@@ -233,6 +250,8 @@ const SliderTitle = styled.div`
 
         p {
             font-size: 1rem;
+            line-height: 25px;
+            letter-spacing: 0px;
         }
     }
 
@@ -262,7 +281,7 @@ const InfoSlider = styled.div`
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        gap: 2rem;
+        gap: 2.5rem;
     }
 
 `

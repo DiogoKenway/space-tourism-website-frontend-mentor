@@ -77,6 +77,7 @@ const Container = styled.div`
         width: 100%;
         height: 70%;
         gap: 2rem;
+        position: relative;
     }
 `
 
@@ -86,9 +87,8 @@ const SectionInfo = styled.section`
     justify-content: space-around;
     padding: 2rem 0;
     height: 100%;
-    // border: solid 3px #444556;
+    // border: solid 1px #444556;
     color: #FFF;
-    position: relative;
 
     @media(max-width: 768px) {
         align-items: center;
@@ -113,7 +113,6 @@ const RoleInformation = styled.div`
     height: 40%;
     width: 40%;
     gap: 1.5rem;
-
 
     h2 {
         text-transform: uppercase;
@@ -159,13 +158,14 @@ const RoleInformation = styled.div`
     }
 
     @media(max-width: 768px) {
-        gap: .6rem;
+        gap: 1rem;
         align-items: center;
-        // text-align: center;
+        text-align: center;
         justify-content: center;
-        // border: solid 1px #99bb20;
+        border: solid 1px #99bb20;
         height: 100%;
-        width: 60%;
+        padding: 1rem;
+        width: 75%;
 
         h2 {
             margin-bottom: .5rem; 
@@ -185,20 +185,27 @@ const RoleInformation = styled.div`
             font-size: 1rem;
             line-height: 28px;
             letter-spacing: 0px;
+            font-family: Barlow;
+            font-size: 16px;
+            font-weight: 400;   
+
         }
 
     }
 
     @media(max-width: 450px) {
-        // border: solid 2px #99bb20;
-        height: 100%;
-        width: 70%;
-        gap: .5rem;
-        padding: .5rem;
-        justify-content: start;
+        border: solid 2px #99bb20;
+        height: 50%;
+        width: 75%;
+        gap: 1rem;
+        padding: 3rem 1rem;
+        justify-content: center;
 
         h2 {
-            display: none;
+            order: -1;
+            font-size: 1.6rem;
+            position: absolute;
+            top: -6%;
         }
 
         p {
@@ -228,12 +235,12 @@ const NavigationPoints = styled.div`
         width: 100px;
         align-items: center;
         position: absolute;
-        top: 75%;
+        bottom: 49%;
     }
 
     @media(max-width: 450px) {
-        order: -1;
-        z-index: 5;
+        top: 21%;
+        z-index: 2;
     }
 `
 
@@ -258,7 +265,7 @@ const SectionPhoto = styled.section`
     }
 
     @media(max-width: 768px) {
-        width: 100%;
+        width: 80%;
         display: flex;
         justify-content: center;
         align-items: center;
@@ -266,7 +273,7 @@ const SectionPhoto = styled.section`
         transform: translate(0px, -100px);
 
         img {
-            width: 70%;
+            width: 65%;
         }
     }
 
@@ -274,9 +281,10 @@ const SectionPhoto = styled.section`
         order: -1;
         transform: translate(0);
         border-bottom: solid 1px #383B4B;
-        width: 90%;
+        width: 100%;
+
         img {
-            width:60%;
+            width:50%;
         }
     }
 `
