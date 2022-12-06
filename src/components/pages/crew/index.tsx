@@ -12,6 +12,7 @@ import {
     GlideWrapper,
     Container,
     SectionInfo,
+    PageTitle,
     RoleInformation,
     NavigationPoints,
     SectionPhoto,
@@ -42,8 +43,10 @@ const Crew = (props: any) => {
                                         <GlideWrapper>
                                             <Container>
                                                 <SectionInfo>
-                                                    <RoleInformation>
+                                                    <PageTitle>
                                                         <h2><strong>02</strong>meet your crew</h2>
+                                                    </PageTitle>
+                                                    <RoleInformation>
                                                         <h3>{item.role}</h3>
                                                         <h1>{item.name}</h1>
                                                         <p>{item.bio}</p>

@@ -108,6 +108,10 @@ const PageTitle = styled.div`
         text-align: center;
     }
 
+    @media(max-width: 450px) {
+        font-size: 1.9rem;
+    }
+
 `
 
 const ContainerImg = styled.div`    
