@@ -14,13 +14,13 @@ const Home = () => {
 
     useEffect(() => {
 
-        // const tl = gsap.timeline();
+        const tl = gsap.timeline();
     
-        // tl.fromTo("#bg", { width: "0%", opacity: 0 }, { opacity: 1, width: "100%" }, ">=2");
-        // tl.fromTo("#subtitle", {x: 1500, opacity: 0}, {x: 0, opacity: 1}, 3);
-        // tl.fromTo("#title", {x: -1500, opacity: 0}, {x: 0, opacity: 1}, 3.2);
-        // tl.fromTo("#text", {x: 1500, opacity: 0}, {x: 0, opacity: 1}, 3.4);
-        // tl.fromTo("#btn", {opacity: 0 }, {opacity: 1, ease : "strong.inOut" }, 3.6)  
+        tl.fromTo("#bg", { width: "0%", opacity: 0 }, { opacity: 1, width: "100%" }, ">=2");
+        tl.fromTo("#subtitle", {x: 1500, opacity: 0}, {x: 0, opacity: 1}, 3);
+        tl.fromTo("#title", {x: -1500, opacity: 0}, {x: 0, opacity: 1}, 3.2);
+        tl.fromTo("#text", {x: 1500, opacity: 0}, {x: 0, opacity: 1}, 3.4);
+        tl.fromTo("#btn", {opacity: 0 }, {opacity: 1, ease : "strong.inOut" }, 3.6)  
         
     }, [])
 

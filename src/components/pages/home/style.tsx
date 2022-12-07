@@ -167,8 +167,8 @@ const BtnExplore = styled.div`
     }
 
     @media(max-width: 450px) {
-        width: 150px;
-        height: 150px;
+        width: 40vw;
+        height: 40vw;
     }
 
     &:hover {
