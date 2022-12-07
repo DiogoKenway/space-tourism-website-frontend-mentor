@@ -20,7 +20,7 @@ function App() {
       <GlobalStyle />
       <Navbar currentRoute={newLocation}/>
       <Routes>
-        <Route path="/" element={<Home dataApi={dataApi} />} />
+        <Route path="/"  element={<Home/>} />
         <Route path="/destination" element={<Destination />} />
         <Route path="/crew" element={<Crew dataApi={dataApi} />} />
         <Route path="/technology" element={<Technology dataApi={dataApi} />} />
