@@ -49,7 +49,7 @@ const Container = styled.div`
         justify-content: center;
         width: 100vw;
         flex-direction: column;
-        padding: .5rem 0;
+        padding: 1rem 0;
         gap: 2rem;
     }
 `
@@ -81,7 +81,7 @@ const PageTitle = styled.div`
         
 
         h2 {
-            font-size: 1.9rem;  
+            font-size: 1.5rem;  
         }
     }
 `
@@ -117,6 +117,8 @@ const NavigationPoints = styled.div`
         flex-direction: row;
         width: 100%;
         justify-content: center;
+        margin-bottom: 2rem;
+        gap: 1rem;
 
         span {
             display: flex;
@@ -169,12 +171,12 @@ const Informations = styled.div`
     }
 
     @media(max-width: 768px) {
-        width: 60vw;
+        width: 55%;
         align-items: center;
 
         h1 {
             font-family: Bellefair;
-            font-size: 2.2rem;
+            font-size: 2.5rem;
             font-weight: 400;
             line-height: 46px;
             letter-spacing: 0px;
@@ -183,21 +185,24 @@ const Informations = styled.div`
 
         p {
             font-family: Barlow;
-            font-size: 16px;
+            font-size: 1rem;
             font-weight: 400;
             line-height: 28px;
             letter-spacing: 0px;
+            font-family: Barlow;
             text-align: center;
-            
+     
         }
     }
 
     @media(max-width: 450px) {
+        width: 90%;
+        padding: 0 1.5rem;
+
         h1 {
             font-size: 24px;
             font-weight: 400;
             line-height: 28px;
-
         }
         
         p {

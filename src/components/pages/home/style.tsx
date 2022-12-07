@@ -39,8 +39,8 @@ const WrapperHome = styled.section`
     @media(max-width: 768px) {
         flex-direction: column;
         align-items: center;
-        justify-content: space-between;
-        height: 80vh;
+        justify-content: space-around;
+        height: 95vh;
         width: 100vw;
     }
 
@@ -59,7 +59,7 @@ const InfoHome = styled.div`
     display: flex;
     flex-direction: column;
     padding: 0 3rem;
-    gap: 1.3rem;
+    gap: 3rem;
     justify-content: end;
     align-items: center;
     color: #FFF;
@@ -85,19 +85,20 @@ const InfoHome = styled.div`
     }
 
     p {
-        font-family: 'Barlow';
-        font-size: 1.2rem;
+        font-family: Barlow;
+        font-size: 1.6rem;
         font-weight: 400;
-        color: #D0D6F9;
-        line-height: 28px;
+        line-height: 40px;
         letter-spacing: 0px;
-
+        font-family: Barlow;
+        color: #D0D6F9;
     }
     
 
     @media(max-width: 768px) {
-        width: 80%;
-        height: 60%;
+        width: 100%;
+        height: 45%;
+        gap: 0;
 
         h1 {
             margin-bottom: .8rem; 
@@ -106,10 +107,17 @@ const InfoHome = styled.div`
             font-weight: 400;
             line-height: 150px;
             letter-spacing: 0px;
+            font-family: Bellefair;
         }
 
         p {
+
+            font-family: Barlow;
+            font-size: 1rem;
+            line-height: 28px;
+            letter-spacing: 0px;
             text-align: center;
+            max-width: 415px;
         }
     }
 
@@ -118,33 +126,33 @@ const InfoHome = styled.div`
         width: 100%;
         height: 50%;
 
-
         h2 {
-            margin: 0;
-            font-size: 1.9rem;
+            font-size: 1.5rem;
         }
 
         h1 {
             margin: 0rem;
-            font-size: 120px;
             font-family: Bellefair;
             line-height: 100px;
-            letter-spacing: 0px;
+            font-size: 5rem;
+
         }
 
         p {
+            font-family: Barlow;
             font-size: 1rem;
-            line-height: 28px;
+            font-weight: 400;
+            line-height: 25px;
             text-align: center;
-            max-width: 400px;
+
         }
     }
 `
 
 
 const BtnExplore = styled.div`
-    width: 275px;
-    height: 275px;
+    width: 16vw;
+    height: 16vw;
     border-radius: 100%;
     background-color: #FFF;
     margin-right: 5%;
@@ -154,13 +162,13 @@ const BtnExplore = styled.div`
     justify-content: center;
 
     @media(max-width: 768px) {
-        width: 35vw;
-        height: 35vw;
+        width: 33vw;
+        height: 33vw;
     }
 
     @media(max-width: 450px) {
-        width: 60vw;
-        height: 60vw;
+        width: 45vw;
+        height: 45vw;
     }
 
     &:hover {

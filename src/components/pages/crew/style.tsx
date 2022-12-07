@@ -56,7 +56,7 @@ const GlideWrapper = styled.div`
 
 const Container = styled.div`
     width: 80%;
-    height: 85%;
+    height: 89%;
     display: flex;
     justify-content: space-between;
     align-items: end;
@@ -73,11 +73,11 @@ const Container = styled.div`
     }
 
     @media(max-width: 450px) {
-        justify-content: flex-start;
+        justify-content: center;
         align-items: center;
         width: 100%;
-        height: 40%;
-        // gap: 2rem;
+        height: 80%;
+        gap: 0;
         position: relative;
     }
 `
@@ -89,15 +89,15 @@ const SectionInfo = styled.section`
     padding: 2rem 0;
     height: 100%;
     gap: 5rem;
-    border: solid 2px #444556;
+    // border: solid 2px #444556;
     color: #FFF;
 
     @media(max-width: 768px) {
         align-items: center;
-        justify-content: center;
-        width: 90%;
-        height: 50%;
-        gap: 1rem;
+        justify-content: start;
+        width: 100%;
+        height: 100%;
+        gap: 3rem;
     }
 
     @media(max-width: 450px) {
@@ -128,10 +128,10 @@ const PageTitle = styled.div`
 
     @media(max-width: 450px) {
         position: absolute;
-        top: -12%;
+        top: -8%;
 
         h2 {
-            font-size: 1.9rem;
+            font-size: 1.5rem;
         }
     }
 
@@ -143,7 +143,7 @@ const RoleInformation = styled.div`
     align-items: flex-start;
     height: 40%;
     width: 40%;
-    gap: 1.5rem;
+    gap: 3rem;
 
     h3 {
         font-family: 'Bellefair';
@@ -162,6 +162,7 @@ const RoleInformation = styled.div`
         font-size: clamp(4vw, 3rem, 2.3rem);
         line-height: 64px;
         text-transform: uppercase;
+        
     }
 
     p {
@@ -171,6 +172,7 @@ const RoleInformation = styled.div`
         line-height: 32px;
         color: #D0D6F9;
         white-space: normal;
+        font-family: Barlow;
     }
 
     @media(max-width: 768px) {
@@ -208,7 +210,7 @@ const RoleInformation = styled.div`
         // border: solid 2px #99bb20;
         height: 50%;
         width: 75%;
-        gap: 1rem;
+        gap: 0;
         padding: 3rem 1rem;
         justify-content: center;
 
@@ -225,6 +227,7 @@ const RoleInformation = styled.div`
             font-size: 24px;
             font-weight: 400;
             line-height: 28px;
+            margin-bottom: 1rem;
         }
     }
 `
@@ -242,7 +245,7 @@ const NavigationPoints = styled.div`
 
     @media(max-width: 450px) {
         order: -1;
-        margin-bottom: 3rem;
+        margin: 2rem 0;
     }
 `
 
@@ -261,13 +264,13 @@ const Dot = styled.span`
 
 
 const SectionPhoto = styled.section`
-    transform: translateX(-250px);
+    transform: translateX(-300px);
     img {
         width: 135%;
     }
 
     @media(max-width: 768px) {
-        width: 80%;
+        width: 60%;
         display: flex;
         justify-content: center;
         align-items: center;
@@ -275,18 +278,18 @@ const SectionPhoto = styled.section`
         transform: translate(0px, -100px);
 
         img {
-            width: 80%;
+            width: 70%;
         }
     }
 
     @media(max-width: 450px) {
         order: -1;
-        transform: translate(0);
+        transform: translate(0, 40px);
         border-bottom: solid 1px #383B4B;
-        width: 100%;
+        width: 90%;
 
         img {
-            width:60%;
+            width: 55%;
         }
     }
 `

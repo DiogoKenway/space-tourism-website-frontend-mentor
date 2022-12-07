@@ -50,7 +50,7 @@ const Destination = () => {
                                                     <Container> 
                                                         <HeaderPage>
                                                             <PageTitle>
-                                                                <h2><strong>02</strong> Pick your destination</h2>
+                                                                <h2><strong>01</strong> Pick your destination</h2>
                                                             </PageTitle>
                                                             <ContainerImg>
                                                                 <img src={getImageByIndex<string>(index, imagesPlanets)} alt={item.name} />
